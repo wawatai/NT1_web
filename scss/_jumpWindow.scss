@@ -1,0 +1,788 @@
+.filter {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: $jumpWindow_Fli;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    justify-content: center;
+
+    &.display {
+        display: flex;
+    }
+
+    .jumpWindow {
+        width: 480px;
+        height: auto;
+        background:$mainBG_2;
+        border-radius: 5px;
+        overflow: hidden;
+
+        &.forgetPassword {
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            form {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+    
+    
+                input {
+                    width: 322px;
+                    height: 42px;
+                    margin-top: 20px;
+                    @include inputStyle;
+                }
+    
+                button {
+                    width: 322px;
+                    height: 42px;
+                    margin-top: 15px;
+                    @include mainBtn;
+                }
+    
+                p {
+                    font-size: 14px;
+                    margin: 30px 0;
+                    color: $remindColor_Main;
+                }
+            }
+        }
+
+        &.news {
+            display: none;
+            width: 840px;
+            min-height: 250px;
+            height: auto;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                
+                p {
+                    font-size: 21px;
+                }
+
+                i {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .nav {
+                margin: 30px 15px 8px;
+                border-bottom: solid 1px $jumpWindow_border;
+                display: flex;
+
+                li {
+                    position: relative;
+                    height: 28px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 2px;
+                    padding: 0 40px;
+                    cursor: pointer;
+                    border-bottom: solid 3px transparent;
+                    color: $jumpWindow_Text;
+                    display: flex;
+                    align-items: center;
+
+                    &:hover,&:active,&.active {
+                        border-color: $jumpWindow_borderActive;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 2px;
+                        height: 15px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: -1px;
+                        background: $jumpWindow_borderActive;
+                    }
+                }
+            }
+
+            .content {
+                display: none;
+                margin: 0px 15px 20px;
+
+                &.display {
+                    display: block;
+                }
+
+                li {
+                    width: 100%;
+                    height: 45px;
+                    padding: 0 5px;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: solid 1px $jumpWindow_border;
+
+                    div {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        p {
+                            font-weight: bold;
+
+                            &.text {
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                max-width: 670px;
+                                color: $jumpWindow_Text;
+                                font-size: 16px;
+                            }
+
+                            &.date {
+                                color: $jumpWindow_Date;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.plsGo {
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            .content {
+                color: $jumpWindow_Text;
+                font-size: 16px;
+                padding: 24px 80px;
+                letter-spacing: 1px;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .btnBox {
+                text-align: center;
+                padding: 20px 0;
+
+                button {
+                    width: 322px;
+                    height: 42px;
+                    @include mainBtn;
+                }
+            }
+        }
+
+        &.score {
+            display: none;
+            width: 400px;
+
+            &.display {
+                display: block;
+            }
+
+            .total {
+                display: flex;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 0;
+                border-bottom: solid 1px $jumpWindow_border;
+                font-size: 16px;
+                color: $jumpWindow_Text;
+
+                p {
+                    color: $jumpWindow_Date;
+                    font-size: 26px;
+                    font-weight: bold;
+                    margin-top: 8px;
+                }
+            }
+
+            ul {
+                max-height: 300px;
+                overflow-y: scroll;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 100%;
+                    height: 48px;
+                    border-bottom: solid 1px $jumpWindow_border;
+
+                    &:last-child {
+
+                        .point {
+
+                            .notice {
+                                top: -40px;
+                                bottom: unset;
+    
+                                p {
+    
+                                    i {
+                                        top: unset;
+                                        bottom: -8px;
+                                        border-width: 8px 6px 0px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    div {
+                        font-size: 14px;
+                        color: $jumpWindow_Text;
+
+                        &.name {
+                            width: 152px;
+                            border-right: solid 1px$jumpWindow_border;
+                            padding-left: 30px;
+                        }
+
+                        &.point {
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            padding-left: 25px;
+                            position: relative;
+
+                            &:hover,&:active,&.active {
+                                
+                                .notice {
+                                    display: block;
+                                }
+                            }
+
+                            .notice {
+                                display: none;
+                                position: absolute;
+                                left: 30px;
+                                bottom: -40px;
+                                width: 139px;
+                                height: 47px;
+                                z-index: 1;
+
+                                p {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: $jumpWindow_bg;
+                                    border-radius: 3px;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: $jumpWindow_Text;
+
+                                    i {
+                                        display: block;
+                                        position: absolute;
+                                        top: -8px;
+                                        left: 15px;
+                                        width: 0px;
+                                        height: 0px;
+                                        border-style: solid;
+                                        border-width: 0px 6px 8px;
+                                        border-color: $jumpWindow_border transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.passwordWindow {
+            display: none;
+            &.display {
+                display: block;
+            }
+
+            form {
+                
+                .content {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 24px 80px;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 30px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 42px;
+                        @include inputStyle;
+                    }
+                }
+
+                .btnBox {
+                    padding-bottom: 43px;
+                    text-align: center;
+
+                    button {
+                        width: 322px;
+                        height: 42px;
+                        @include mainBtn;
+                    }
+                }
+            }
+        }
+
+        &.ReviseWindow {
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            form {
+
+                padding-bottom: 25px;
+                
+                .content {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 24px 80px;
+
+                    li {
+                        width: 100%;
+                        height: auto;
+                        margin-bottom: 30px;
+                        font-size: 14px;
+
+                        &:last-child {
+                            margin: 0;
+                        }
+                        button {
+                            @include smallBtn;
+                            padding: 4px 13px;
+                            border-radius: 3px;
+                            position: absolute;
+                            margin: 8px 0px 0px -100px;
+                        }
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 42px;
+                        @include inputStyle;
+                    }
+                }
+
+                .btnBox {
+                    padding-bottom: 15px;
+                    text-align: center;
+
+                    button {
+                        width: 322px;
+                        height: 42px;
+                        @include mainBtn;
+                    }
+                }
+
+                span {
+                    color: $remindColor_Main;
+                    font-size: 15px;
+                    font-weight: bold;
+                    padding-left: 105px;
+                }
+            }
+        }
+
+        &.walletRecord {
+            width: 976px;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                height: 50px;
+                background: none;
+                box-sizing: border-box;
+                padding: 0 30px;
+                background: $jumpWindow_titleBg;
+
+                p {
+                    font-size: 21px;
+                    text-align: center;
+                    color:$jumpWindow_Titlecolor;
+                }
+
+                i {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .content {
+                height: auto;
+                padding: 0 30px 23px;
+
+                .num {
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    color: $jumpWindow_Text;
+                    padding-top: 10px;
+                }
+
+                table {
+                    width: 100%;
+                    margin-top: 18px;
+                    border: 1px solid $main_Border_2;
+                    overflow: hidden;
+
+                    tr {
+
+                        th {
+                            width: 25%;
+                            vertical-align: middle;
+                            height: 35px;
+                            border-bottom: solid 2px $specailBorder;
+                            font-size: 12px;
+                            color: $jumpWindow_Text;
+                        }
+
+                        td {
+                            padding: 10px 5px;
+                            font-size: 14px;
+                            border-bottom: 1px solid $main_Border_2;
+
+                            &.numTd {
+                                padding-left: 25px;
+                            }
+                            &.nameTd {
+                                padding-left: 55px;
+                            }
+                            &.money {
+                                padding-left: 97px;
+                                color: $bAseactive;
+                            }
+                            &.timTd {
+                                padding-left: 25px;
+                            }
+                        }
+                    }
+                }
+
+                .noData {
+                    height: 80px;
+                    padding: 0 30px 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    color:$remindColor_Main;
+                }
+            }
+        }
+
+        &.checkEvent {
+            display: none;
+            width: 840px;
+
+            &.display {
+                display: block;
+            }
+
+            .content {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 28px 47px;
+
+                .imgBox {
+                    overflow-x: auto;
+                }
+
+                p {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: $jumpWindow_Date;
+                    margin-top: 10px;
+                }
+            }
+
+            .btnBox {
+                width: 100%;
+                height: auto;
+                padding: 18px 0;
+                text-align: center;
+
+                button {
+                    width: 322px;
+                    height: 42px;
+                    @include mainBtn;
+                }
+            }
+        }
+
+        &.betWindow {
+            display: none;
+            flex-direction: column;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 50px;
+                background: $jumpWindow_titleBg;
+            }
+
+            &.display {
+                display: flex;
+            }
+
+            .close_ic {
+                position: absolute;
+                top: 16px;
+                right: 24px;
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+            }
+
+            .betTitle {
+                // width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                // padding-left: 185px;
+                // padding-top: 13px;
+                font-size: 21px;
+                font-weight: bold;
+                position: absolute;
+                top: 2.5%;
+                left: 50%;
+                transform: translate(-50%);
+                color: $jumpWindow_Titlecolor;
+            }
+
+            form {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                margin-top: 20px;
+                padding: 0 45px;
+
+                .row {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 42px;
+                    margin-bottom: 10px;
+                    // justify-content: center;
+
+                    &:nth-of-type(3) {
+                        margin: 2px;
+                        margin-top: -5px;
+                    }
+
+                    &.forBtn {
+                        justify-content: flex-end;
+                        height: auto;
+                    }
+
+                    p {
+                        width: 120px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        color: $jumpWindow_Text;
+                    }
+
+                    span {
+                        font-size: 28px;
+                    }
+
+                    input {
+                        width: 267px;
+                        height: 42px;
+                        @include inputStyle;
+                    }
+
+                    .trans_arrow {
+                        display: block;
+                        width: 24px;
+                        height: 21px;
+                        transform: rotate(90deg);
+                        margin-left: 240px;
+                    }
+
+                    .btnBox {
+                        width: 267px;
+                        height: auto;
+
+                        button {
+                            width: 85px;
+                            height: 32px;
+                            @include  buttonStyle_put;
+                            margin: 0 2px 6px 0;
+
+                            &:nth-of-type(3n) {
+                                margin-right: 0;
+
+                            }
+                        }
+                    }
+                    
+                    .check {
+                        width: 267px;
+                        height: 42px;
+                        @include mainBtn;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .enterGame {
+                width: 100%;
+                height: auto;
+                text-align: center;
+                padding: 20px 0;
+                border-top: solid 1px $jumpWindow_border;
+
+                button {
+                    width: 351px;
+                    height: 42px;
+                    @include  mainBtn;
+                }
+            }
+        }
+        &.onemember {
+            width: 495px;
+            display: none;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                height: 50px;
+                background: none;
+                box-sizing: border-box;
+                padding: 0 30px;
+                background: $jumpWindow_titleBg;
+
+                p {
+                    font-size: 21px;
+                    text-align: center;
+                    color:$jumpWindow_Titlecolor;
+                }
+
+                i {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+
+            .content {
+                height: auto;
+                padding: 0 30px 23px;
+
+                .num {
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    color: $jumpWindow_Text;
+                    padding-top: 10px;
+                }
+
+                table {
+                    width: 100%;
+                    margin-top: 18px;
+                    border: 1px solid $main_Border_2;
+                    overflow: hidden;
+
+                    tr {
+
+                        th {
+                            width: 25%;
+                            vertical-align: middle;
+                            height: 35px;
+                            border-bottom: solid 2px $specailBorder;
+                            font-size: 15px;
+                            font-weight: bold;
+                            color: $jumpWindow_Text;
+                        }
+
+                        td {
+                            padding: 10px 5px;
+                            font-size: 14px;
+                            border-bottom: 1px solid $main_Border_2;
+
+                            &.numTd {
+                                text-align: center;
+                            }
+                            &.nameTd {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+
+                .noData {
+                    height: 80px;
+                    padding: 0 30px 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                    color:$remindColor_Main;
+                }
+            }
+        }
+
+        .title {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            background: $jumpWindow_titleBg;
+            position: relative;
+
+            p {
+                color: $jumpWindow_Titlecolor;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+            }
+
+            i {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+    }
+}

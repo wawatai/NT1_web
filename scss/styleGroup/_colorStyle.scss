@@ -1,0 +1,418 @@
+//主色系
+$mainBG_1: #3d4cce;
+$mainBG_2:#ffffff;
+$mainBG_3: #f8f8fa;
+
+//主要boder
+$main_Border: #4c4c4c;
+$main_Border_2: #e6e6e6;
+
+//Table用底線
+$specailBorder: #3d4cce;
+
+//優惠申請邊框
+$saleBorder: #86b6fe;
+
+//Table
+$table_BG:#ffffff;
+$table_Th_Bg:#ffffff;
+$table_Th_color:#333333;
+$table_Td_Border:#dbdef4;
+
+//主要文字色
+$main_Color:#333333;
+$main_Color2:#ffffff;
+$main_Color3:#999999;
+$main_Color4:#3d4cce;
+$main_Color6: #4d4d4d;
+$main_Color7: #4a59ed;
+//相關條款與隱私政策
+$readcolor:#c69c6d;
+//內頁金色字
+$inner_Color:#cfa678;
+//主要陰影
+$boxShadow_1:  #dee1f5;
+$boxShadow_2: #c0c0c0;
+$boxShadow_3: #00000033;
+
+//remind
+$remindColor_Second:#999999;
+$remindColor_Main:#e11515;
+
+//等級
+$level_low:#3d4cce;
+$level_middle:#ff8d68;
+$level_high:#0df;
+
+//個人資料內頁資料順序圓框
+$bAse:#c7c7c7;
+$bAseactive:#05b900;
+
+
+//jumpWindow
+$jumpWindow_Fli:#000000a3;
+$jumpWindow_bg:#f8f8fa;
+$jumpWindow_Titlecolor:#ffffff;
+$jumpWindow_Text:#333333;
+$jumpWindow_Date:#666666;
+$jumpWindow_border:#b3b3b3;
+$jumpWindow_borderActive:#4a59ed;
+$jumpWindow_titleBg:linear-gradient(135deg,#7c4dff,#887aff);
+
+//帶before選項+active
+@mixin optionStyle_1 {
+    color: #666666;
+    font-size: 14px;
+    padding-left: 64px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: #f0f5ff;
+        color: #333333;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            background: #0068ff;
+        }
+    }
+}
+
+//註冊頁金色line&wechet
+@mixin register_lineBtn {
+    border: 1px solid #adadad;
+    background: linear-gradient(0deg,#d9d9d9 0,#ededed 50%,#fff);
+    border-radius: 5px;
+}
+
+//投注金額按鈕
+@mixin buttonStyle_put {
+    font-size: 15px;
+    font-weight: bold;
+    color: #999999;
+    background: linear-gradient(to bottom,#ffffff 40%,#f4f4f4 100%);
+    border: solid 1px #e8e8e8;
+    border-radius: 3px;
+    letter-spacing: 1px;
+
+    &:hover,&:active,&.active {
+        background: #4a59ed;
+        color: #ffffff;
+    }
+}
+
+//input
+@mixin inputStyle {
+    border: solid 1px #dedede;
+    background: transparent;
+    text-align: left;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+@mixin inputStyle_1 {
+    border: none;
+    background: transparent;
+    color: #000;
+}
+
+//select
+@mixin select_Style {
+    border: solid 1px #dedede;
+    background: transparent;
+    text-align: left;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 16px;
+    background-image: linear-gradient(45deg,transparent 50%,#3278ff 0),linear-gradient(135deg,#3278ff 50%,transparent 0);
+    background-position: calc(100% - 20px) calc(1em + 2px),calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px,5px 5px;
+    background-repeat: no-repeat;
+    appearance: none;
+
+    option {
+        background: #ffffff;
+        color: #000000;
+    }
+}
+
+//header上
+$headerTop_Btn: #ffffff;
+$headerTop_Border: #4a59ed;
+$headerTop_Remind:#0df;
+$headerTop_Hover:#0068ff;
+$headerTop_before:#ffff00;
+
+@mixin headerTopInput {
+    border: solid 1px #e6e6e6;
+    background: #ffffff;
+    color: #333333;
+    border-radius: 3px;
+    padding: 0 5px 0 30px;
+    font-size: 14px;
+}
+
+//transferInfo(top上的下拉bar)
+$transferInfo_bg:#666;
+$transferInfo_Border:#737373;
+$transferInfo_Coler:#ffffff;
+
+//語言列
+@mixin langStyle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+
+    option {
+        background: #ffffff;
+        color: #333333;
+    }
+}
+
+//header下
+$headerBottom_Color: #333333;
+$headerBottom_Border: #4a59ed;
+$headerBottom_trianGle:#4a59ed;
+
+//跑馬燈 
+$marqueeArea_BG:#ffffff;
+$marqueeArea_Color:#333333;
+$marqueeArea_Shadow:#dee1f5;
+
+//solt遊戲框
+$gamebg:#f8f8fa;
+$gameboder:#b3b3b3;
+$game_shadow:#00000033;
+$game_color:#333333;
+$game_hoverBG:#0000006e;
+@mixin game_btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #f1c999 1%,#cca172 50%,#f1d7b7 100%);
+    border: solid 1px #f9e3c8;
+    border-radius: 5px;
+    letter-spacing: 1px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top, #f1c999 0%,#cca172 100%);
+        color: #ffffff;
+    }
+}
+@mixin game_Lastbtn {
+    background: linear-gradient(to bottom,#9ddbec 0%,#0282cc 50%,#82aeeb 100%);
+    border: solid 1px #0282cc;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top,#9ddbec 0%,#0282cc 50%,#82aeeb 100%);
+    }
+}
+
+//存提頁
+//lv
+$LV_Bg:#cfb53d;
+$LV_Color:#ffffff;
+
+//轉存提小圓按鈕
+@mixin inout_Btn {
+    background: #e6ebff;
+    border: 1px solid #85b5fe;
+    color: #4a59ed;
+    border-radius: 50%;
+    font-size: 21px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    &:hover,&:active,&.active {
+        background: #4a59ed;
+        color: #ffffff;
+    }
+}
+
+//忖款選項按鈕(滑入紫色漸層)
+@mixin deposit_Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px #cccccc;
+    border-radius: 3px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(135deg,#7c4dff,#887aff);
+        color: #ffffff;
+        border-color: transparent;
+    }
+}
+
+//remindbox重要提醒框
+$remineBoder:#cca172;
+$remineTitle:#cfa678;
+$remineText:#333333;
+
+//字和邊框都金色按鈕
+@mixin smallBtn {
+    border: solid 1px #cca172;
+    color: #cca172;
+    background: none;
+    text-decoration: none;
+    text-align: center;
+}
+//查看活動小按鈕
+@mixin smallBtn2 {
+    color: #557bff;
+    border: solid 1px #557bff;
+    background: none;
+}
+//金色hover變成藍色底按鈕
+@mixin dateBtn {
+    background: linear-gradient(#fff 40%,#f4f4f4);
+    border: 1px solid #e8e8e8;
+    color: #333333;
+    border-radius: 3px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover,&:active,&.active {
+        background: #0068ff;
+        color: #ffffff;
+    }
+}
+
+//tabs
+@mixin tabs_btn {
+    background: #999;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(135deg,#2e7bff,#734af6);
+    }
+}
+//字和框都藍色小按鈕
+@mixin bet_btn {
+    color: #29abff;
+    background: none;
+    text-decoration: none;
+    border: 1px solid #29abff;
+    text-align: center;
+}
+
+//銀行卡片顏色
+$eMpty_Bg: linear-gradient(120deg,#e8ebf2 0%,#cbcdd3 30%);
+$register_Bg: linear-gradient(120deg,#f1d7b7 0%,#cca172 50%,#f1c999 100%);
+$register_Border: #dbdef4;
+
+//投注金額按鈕白金色
+@mixin much_Btn {
+    font-size: 15px;
+    font-weight: bold;
+    color: #999999;
+    background: linear-gradient(to bottom,#ffffff 40%,#f4f4f4 100%);
+    border: solid 1px #e8e8e8;
+    border-radius: 3px;
+    letter-spacing: 1px;
+
+    &:hover,&:active,&.active {
+        background: #4a59ed;
+        color: #ffffff;
+    }
+}
+
+//站內信
+$mailread_Color:#e8e8e8;
+//站內信已讀按鈕
+@mixin mailreadBtn {
+    color: #4cb816;
+    border: solid 1px #4cb816;
+    background: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    font-size: 14px;
+}
+//站內信刪除按鈕
+@mixin maildeleteBtn {
+    color: #e11515;
+    border: solid 1px #e11515;
+    background: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 3px;
+    line-height: 25px;
+    
+}
+
+//footer
+$footer_bg:#333333;
+$footer_bg2:#e6e6e6;
+
+//常見金色漸層Btn
+@mixin mainBtn {
+    background: linear-gradient(#f1d7b7,#cca172 50%,#f1c999);
+    border:1px solid #d2a269;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 16px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top,#f1d7b7 0,#cca172 50%,#f1c999);
+    }
+}
+
+//disable
+@mixin disable {
+    background:#c7c7c7;
+    color: #ffffff;
+    &:hover,&:active,&.active {
+        background:#c7c7c7;
+        color: #ffffff;
+    }
+}
+
+//不能打字的input
+$notable:#fafafa;
+
+//sideBar
+@mixin sideBar {
+    background:linear-gradient(#3179ff,#784dff);
+    color: #ffffff;
+
+    &:hover,&:active,&.active {
+        background: #0068FF;
+    }
+}

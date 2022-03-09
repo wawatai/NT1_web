@@ -1,0 +1,4843 @@
+.innerPage {
+    background: $mainBG_3;
+    padding: 20px 0 40px;
+
+    .center {
+        width: 1400px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+
+        section {
+            display: flex;
+        }
+
+        hr {
+            width: 100%;
+            border: solid 1px $main_Border_2;
+            border-width: 1px 0 0;
+            margin: 0;
+        }
+    
+        //左列
+        .innerSide {
+            background: $mainBG_2;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px -5px $boxShadow_3;
+            width: 245px;
+            height: auto;
+            margin-right: 15px;
+            padding-bottom: 25px;
+    
+            .userInfo {
+                width: 100%;
+                height: auto;
+                padding: 20px 0;
+                display: flex;
+                justify-content: center;
+    
+                div {
+    
+                    .account {
+                        color: $main_Color;
+                        font-size: 14px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+    
+                        .lv {
+                            padding: 3px 8px;
+                            margin-left: 10px;
+                            color: $LV_Color;
+                            background: $LV_Bg;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    .days {
+                        color: $main_Color3;
+                        font-size: 14px;
+                        margin-top: 10px;
+                        font-weight: bold;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .quickSelect {
+                        width: 160px;
+                        padding: 15px 0 10px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        li {
+                            cursor: pointer;
+
+                            p {
+                                text-align: center;
+    
+                                &:last-child {
+                                    margin-top: 6px;
+                                    font-size: 14px;
+                                }
+    
+                                &.btn {
+                                    width: 40px;
+                                    height: 40px;
+                                    @include inout_Btn;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .innerNav {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 50px;
+                    @include optionStyle_1;
+
+                    &:nth-of-type(1),&:nth-of-type(7) {
+                        border-top: solid 1px $main_Border_2;
+                    }
+
+                    i {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 25px;
+                        
+                        &.user_ic {
+                            width: 14px;
+                            height: 16px;
+                        }
+                        &.invite_ic {
+                            width: 17px;
+                            height: 19px;
+                        }
+                        &.vip_ic {
+                            width: 17px;
+                            height: 17px;
+                        }
+                        &.wallet_ic {
+                            width: 15px;
+                            height: 13px;
+                        }
+                        &.card_ic {
+                            width: 17px;
+                            height: 15px;
+                        }
+                        &.dealRecord_ic {
+                            width: 13px;
+                            height: 15px;
+                        }
+                        &.dividend_ic {
+                            width: 15px;
+                            height: 14px;
+                        }
+                        &.betRecord_ic {
+                            width: 12px;
+                            height: 16px;
+                        }
+                        &.event_ic {
+                            width: 13px;
+                            height: 18px;
+                        }
+                        &.mail_ic {
+                            width: 14px;
+                            height: 11px;
+                        }
+                    }
+                }
+            }
+        }
+
+        //member
+        .memberWrap {
+            width: 880px;
+            margin-right: 15px;
+
+            .top {
+                width: 100%;
+                height: auto;
+                background:$mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                border-radius: 5px;
+                margin-bottom: 20px;
+
+                h1 {
+                    display: flex;
+                    height: 50px;
+                    align-items: center;
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 0 20px;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    color: $main_Color;
+                    border-bottom: solid 1px $main_Border_2;
+                    font-weight: bold;
+                }
+
+                .content {
+                    width: 100%;
+                    height: auto;
+                    padding: 15px 22px 18px;
+
+                    p {
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        color: $main_Color;
+                        font-weight: bold;
+
+                        &.remind {
+                            margin-top: 6px;
+                            color:$remindColor_Second;
+                        }
+
+                        em {
+
+                            &.low {
+                                color: $level_low;
+                            }
+
+                            &.middle {
+                                color:$level_middle;
+                            }
+
+                            &.high {
+                                color: level_high;
+                            }
+                        }
+                    }
+
+                    .level {
+                        margin-top: 14px;
+                        display: flex;
+
+                        li {
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            color: $main_Color;
+                            display: flex;
+                            align-items: center;
+                            margin-right: 27px;
+                            font-weight: bold;
+
+                            &.active {
+
+                                i {
+                                    background-color: $bAseactive;
+                                }
+                            }
+
+                            i {
+                                display: block;
+                                width: 31px;
+                                height: 31px;
+                                background-color: $bAse;
+                                border-radius: 50%;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+
+                .tabs {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 0 24px;
+                    display: flex;
+
+                    li {
+                        min-width: 105px;
+                        height: 35px;
+                        margin-right: 7px;
+                        text-align: center;
+                        line-height: 35px;
+                        border-radius: 5px 5px 0 0;
+                        font-size: 14px;
+                        @include tabs_btn;
+                    }
+                }
+
+                //基本資料
+                .dataWrap {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    background:$mainBG_2;
+                    box-shadow: 0px 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    .content {
+                        padding: 20px 24px;
+                        border-bottom: solid 1px $main_Border_2;
+
+                        h1 {
+                            font-size: 17px;
+                            letter-spacing: 2px;
+                            color:$main_Color;
+                            font-weight: bold;
+                        }
+
+                        .fakeTable {
+                            width: 100%;
+                            height: auto;
+                            margin: 20px 0;
+                            display: flex;
+
+                            li {
+                                width: 50%;
+
+                                &.left {
+
+                                    form {
+
+                                        ul {
+                                            width: 100%;
+                                            height: auto;
+
+                                            li {
+                                                width: 100%;
+                                                height: auto;
+                                                margin-bottom: 20px;
+
+                                                em {
+
+                                                    &::before {
+                                                        content: "※ ";
+                                                        color: $remindColor_Main;
+                                                    }
+                                                }
+
+                                                input {
+                                                    width: 257px;
+                                                }
+
+                                                .notable {
+                                                    background: $notable;
+                                                }
+
+                                                .remind {
+                                                    font-size: 12px;
+                                                    padding-left: 110px;
+                                                    color: $remindColor_Main;
+                                                    font-weight: bold;
+                                                    margin-top: 6px;
+
+                                                    &.np {
+                                                        color: $remindColor_Second;
+                                                        span {
+                                                            color:$main_Color7;
+                                                        }
+                                                    }
+                                                }
+
+                                                // button {
+                                                //     width: 257px;
+                                                //     height: 42px;
+                                                //     position: relative;
+                                                //     left: 110px;
+                                                //     @include mainBtn;
+                                                // }
+
+                                                .smalltyBtn {
+                                                    width: 70px;
+                                                    height: 32px;
+                                                    @include mainBtn;
+                                                    margin: 5px 0px 0 -76px;
+                                                    position: absolute;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &.right {
+
+                                    ul {
+                                        width: 100%;
+                                        height: auto;
+
+                                        li {
+                                            width: 100%;
+                                            height: 41px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: flex-start;
+                                            position: relative;
+                                            margin-bottom: 20px;
+
+                                            p {
+                                                font-size: 14px;
+                                                color:$main_Color;
+                                                font-weight: bold;
+                                            }
+
+                                            // .copy {
+                                            //     width: auto;
+                                            //     height: 30px;
+                                            //     position: absolute;
+                                            //     right: 0px;
+                                            //     top: 50%;
+                                            //     transform: translateY(-50%);
+                                            //     @include smallBtn;
+                                            // }
+                                        }
+                                    }
+                                }
+
+                                label {
+                                    display: inline-block;
+                                    width: 80px;
+                                    height: auto;
+                                    text-align: right;
+                                    margin-right: 26px;
+                                    font-size: 14px;
+                                    letter-spacing: 1px;
+                                    color: $main_Color;
+                                    font-weight: bold;
+                                }
+
+                                input {
+                                    width: 200px;
+                                    height: 41px;
+                                    font-size: 14px;
+                                    @include inputStyle;
+                                }
+                            }
+                        }
+                    }
+
+                    .changePassword {
+                        padding: 20px 24px;
+                        
+                        h1 {
+                            font-size: 17px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                            color: $main_Color;
+                        }
+
+                        ul {
+                            margin: 25px 0;
+
+                            li {
+
+                                label {
+                                    display: inline-block;
+                                    width: 80px;
+                                    height: auto;
+                                    text-align: right;
+                                    margin-right: 26px;
+                                    font-size: 14px;
+                                    letter-spacing: 1px;
+                                    color: $main_Color;
+                                    font-weight: bold;
+                                }
+
+                                input {
+                                    width: 180px;
+                                    height: 41px;
+                                    @include inputStyle_1;
+                                }
+
+                                button {
+                                    width: 70px;
+                                    height: 32px;
+                                    @include mainBtn;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //平臺帳號密碼
+                .platformWrap {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_2;
+                    box-shadow: 0px 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    padding: 20px 0px 24px;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    h1 {
+                        padding: 20px 24px;
+                        font-size: 17px;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                        font-weight: bold;
+                    }
+                    table {
+                        width: 100%;
+                        height: auto;
+                        margin: 20px 0 7px;
+
+                        tr {
+
+                            border-bottom: 1px solid $main_Border_2;
+
+                            th,td {
+                                height: 50px;
+                                vertical-align: middle;
+                                text-align: center;
+                                font-size: 13px;
+                                letter-spacing: 1px;
+                                font-weight: bold;
+                                color: $main_Color;
+                                position: relative;
+                                border-bottom: solid 2px $specailBorder;
+
+                                &:last-child {
+
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 1px;
+                                    height: 50%;
+                                    transform: translateY(-50%);
+                                    top: 50%;
+                                    right: 0px;
+                                    background:$main_Border_2;
+                                }
+                            }
+
+                            td {
+                                width: 17%;
+                                border-bottom: none;
+
+                                &:nth-of-type(3) {
+                                    color:$main_Color4;
+                                }
+
+                                &:nth-of-type(5) {
+                                    color: $bAseactive;
+                                }
+                            }
+                        }
+                    }
+
+                    .noData {
+                        display: none;
+                        width: 100%;
+                        height: 533px;
+                        justify-content: center;
+                        align-items: center;
+                        letter-spacing: 1px;
+                        color: $main_Color6;
+                        font-weight: bold;
+
+                        &.display {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+        //vip
+        .vipWrap {
+            display: none;
+            width: 1140px;
+            height: auto;
+            background: $mainBG_2;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px -5px $boxShadow_3;
+
+            &.display {
+                display: block;
+            }
+
+            &.innerMode {
+                padding: 24px 0 30px;
+            }
+
+            .vipHeader {
+                width: 100%;
+                height: auto;
+                padding-left: 40px;
+                display: flex;
+                box-sizing: border-box;
+
+                .medal {
+                    width: 80px;
+                    height: 116px;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    margin-right: 30px;
+
+                    div {
+                        width: 100%;
+                        height: 92px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        p {
+                            width: 76px;
+                            font-weight: bold;
+                            font-size: 22px;
+                            text-align: center;
+                            color: $main_Color;
+                        }
+                    }
+                }
+
+                .rightBox {
+                    width: 100%;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    .lv {
+                        margin: 17px 0 10px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                    }
+
+                    .money {
+
+                        span {
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            color: $inner_Color;
+                            font-weight: bold;
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+
+            .lvGraph {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 20px 20px 0;
+
+                .text {
+                    display: flex;
+                    margin-bottom: 8px;
+                    position: relative;
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 20%;
+                        font-size: 14px;
+                        color: $inner_Color;
+
+                        &:nth-of-type(2) {
+                            margin-left: -18px;
+                        }
+
+                        &:last-child {
+                            text-align: right;
+                            position: absolute;
+                            right: 0px;
+                            top: 0px;
+                        }
+                    }
+                }
+
+                .bar {
+                    display: flex;
+                    height: 13px;
+
+                    li {
+                        width: 20%;
+                        height: 100%;
+                        background: $mainBG_1;
+
+                        &.active {
+                            background: $main_Color7;
+                        }
+                    }
+                }
+            }
+
+            .nextBox {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 22px 20px;
+
+                .nextWord {
+                    width: 100%;
+                    height: auto;
+                    letter-spacing: 2px;
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                    color: $inner_Color;
+                }
+
+                .nextBar {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                    color: $inner_Color;
+                    font-weight: bold;
+
+                    .bar {
+                        width: 400px;
+                        height: 8px;
+                        border-radius: 8px;
+                        margin: 0 15px;
+                        background: $mainBG_3;
+                        overflow: hidden;
+                        position: relative;
+
+                        .cnt {
+                            width: 7%;
+                            height: 100%;
+                            border-radius: 8px;
+                            position: absolute;
+                            top: 0px;
+                            left: 0px;
+                            background: $LV_Bg;
+                        }
+                    }
+
+                    button {
+                        width: 83px;
+                        height: 31px;
+                        font-size: 13px;
+
+                        &.check {
+                            margin: 0 14px 0px 30px;
+                            @include smallBtn;
+                        }
+
+                        &.levelUp {
+                            @include mainBtn;
+                        }
+                    }
+                }
+            }
+
+            .levelEnjoy {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                padding: 18px 22px 6px;
+                border-top: solid 1px $main_Border;
+
+                .title {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 30px;
+                    font-size: 17px;
+                    letter-spacing: 2px;
+                    color: $main_Color7;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: calc(33.3% - 1px);
+                        border-right: solid 1px $main_Border;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height: 70px;
+                        margin-bottom: 18px;
+
+                        &:nth-of-type(3n) {
+                            border: none;
+                        }
+
+                        .text {
+                            margin-bottom: 10px;
+                            font-size: 15px;
+                            letter-spacing: 1px;
+                            color: $inner_Color;
+                        }
+
+                        .num {
+                            font-size: 28px;
+                            color: $headerTop_Remind;
+                            font-weight: bold;
+                        }
+                    }
+                }
+
+                .more {
+                    display: block;
+                    width: 321px;
+                    height: 41px;
+                    margin: 40px auto 44px;
+                    @include smallBtn;
+                }
+            }
+
+            .detailTitle {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 0 20px;
+                margin-bottom: 13px;
+                font-size: 17px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                color: $main_Color7;
+
+                .back {
+                    display: block;
+                    width: 9px;
+                    height: 18px;
+                    margin-right: 13px;
+                    cursor: pointer;
+                }
+            }
+
+            .detailCardBox {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+
+                i {
+                    width: 9px;
+                    height: 18px;
+                    cursor: pointer;
+
+                    &.prev {
+                        margin-right: 13px;
+                    }
+
+                    &.next {
+                        margin-left: 13px;
+                        transform: scaleX(-1);
+                    }
+                }
+
+                .wrap {
+                    overflow: hidden;
+                    width: 100%;
+                    height: auto;
+
+                    ul {
+                        display: flex;
+                        width: 1740px;
+                        height: 152px;
+                        transition: all 0.6s ease;
+
+                        li {
+                            margin-right: 9px;
+
+                            &:last-child {
+                                margin: 0;
+                            }
+
+                            .cardBg {
+                                width: 281px;
+                                height: 152px;
+                                box-sizing: border-box;
+                                padding: 0 10px;
+
+                                &.active {
+
+                                    .content {
+
+                                        div {
+
+                                            .text {
+                                                color: $main_Color2;
+                                            }
+
+                                            .num {
+                                                color: $main_Color2;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .medal {
+                                    width: 54px;
+                                    height: 77px;
+                                    display: flex;
+                                    align-items: flex-end;
+                                    justify-content: center;
+
+                                    div {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 100%;
+                                        height: 61px;
+
+                                        p {
+                                            width: 76px;
+                                            height: auto;
+                                            text-align: center;
+                                            font-size: 16px;
+                                            font-weight: bold;
+                                            color: $main_Color;
+                                        }
+                                    }
+                                }
+
+                                .content {
+                                    width: 100%;
+                                    height: auto;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    margin-top: 19px;
+
+                                    div {
+                                        width: 33.3%;
+                                        height: auto;
+
+                                        p {
+                                            width: 100%;
+                                            height: auto;
+                                            text-align: center;
+
+                                            &.text {
+                                                font-size: 12px;
+                                                margin-bottom: 8px;
+                                                color: $remindColor_Main;
+                                            }
+
+                                            &.num {
+                                                font-size: 15px;
+                                                color: $main_Color7;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .detailTitle_2 {
+                font-size: 17px;
+                font-weight: bold;
+                color: $main_Color;
+                margin: 15px 0 10px 22px;
+                
+                &.first {
+                    margin: 40px 0 20px 22px;
+                }
+            }
+
+            .fakeTable {
+                width: 100%;
+                height: auto;
+                box-sizing: border-box;
+                margin-top: 10px;
+                padding: 0 18px;
+                
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 50px;
+                    border-bottom: solid 1px $main_Border;
+
+                    &.header {
+                        border-bottom: solid 2px $specailBorder;
+                    }
+
+                    div {
+                        width: 120px;
+                        text-align: center;
+                        font-size: 13px;
+                        letter-spacing: 1px;
+                        color: $main_Color;
+                        border-right: solid 1px $main_Border;
+                        box-sizing: border-box;
+                        font-weight: bold;
+
+                        &:last-child {
+                            border: none;
+                        }
+
+                        &:nth-of-type(1) {
+                            width: 190px;
+                        }
+                    }
+                }
+            }
+
+            hr {
+                margin-top: 28px;
+            }
+        }
+
+        //.wallet
+        .walletWrap {
+            display: flex;
+
+            .walletMiddle {
+                width: 880px;
+                margin-right: 15px;
+
+                .top {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 56px;
+                    background: $mainBG_2;
+                    box-shadow: 0px 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+
+                    .title {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 50px;
+                        box-sizing: border-box;
+                        padding-left: 22px;
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                        font-weight: bold;
+                    }
+
+                    .content {
+                        display: flex;
+                        height: auto;
+
+                        //左
+                        .total {
+                            width: 50%;
+                            box-sizing: border-box;
+                            padding: 14px 0 0 24px;
+                            height: 170px;
+                            border-right: solid 1px $main_Border_2;
+
+                            &:nth-of-type(2) {
+                                border: none;
+                            }
+                            
+                            .totalTitle {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                margin-bottom: 11px;
+                                font-size: 17px;
+                                letter-spacing: 2px;
+                                color: $main_Color;
+                                font-weight: bold;
+
+                                .icon {
+                                    display: block;
+                                    position: relative;
+                                    width: 18px;
+                                    height: 18px;
+                                    margin-left: 7px;
+
+                                    &:hover,&:active,&.active {
+
+                                        .jumpRemind {
+                                            display: flex;
+                                        }
+                                    }
+
+                                    .jumpRemind {
+                                        display: none;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        left: 28px;
+                                        width: 240px;
+                                        height: 31px;
+                                        align-items: center;
+                                        background: $LV_Bg;
+                                        border-radius: 3px;
+
+                                        p {
+                                            text-align: center;
+                                            width: 100%;
+                                            font-size: 14px;
+                                            letter-spacing: 1px;
+                                            color:$main_Color;
+
+                                            i {
+                                                position: absolute;
+                                                display: block;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                left: -8px;
+                                                border-style: solid;
+                                                border-width: 6px 8px 6px 0px;
+                                                border-color: transparent $remineBoder;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                button {
+                                    width: auto;
+                                    height: auto;
+                                    @include mainBtn;
+                                    padding: 1px 6px;
+                                    margin-left: 220px;
+                                }
+                            }
+
+                            .amount {
+                                width: 100%;
+                                height: auto;
+                                box-sizing: border-box;
+                                padding-left: 11px;
+                                font-size: 43px;
+                                color: $main_Color;
+                                font-weight: bold;
+                            }
+                        }
+
+                        //右
+                        .able {
+                            width: 50%;
+                            box-sizing: border-box;
+                            padding: 14px 0 0 24px;
+                            height: 170px;
+                            
+                            .ableTitle {
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                margin-bottom: 11px;
+                                font-size: 17px;
+                                letter-spacing: 2px;
+                                color:$main_Color;
+                                font-weight: bold;
+
+                                .icon {
+                                    display: block;
+                                    position: relative;
+                                    width: 18px;
+                                    height: 18px;
+                                    margin-left: 7px;
+
+                                    &:hover,&:active,&.active {
+
+                                        .jumpRemind {
+                                            display: flex;
+                                        }
+                                    }
+
+                                    .jumpRemind {
+                                        display: none;
+                                        position: absolute;
+                                        top: 50%;
+                                        transform: translateY(-50%);
+                                        left: 28px;
+                                        width: 240px;
+                                        height: 31px;
+                                        align-items: center;
+                                        background: $LV_Bg;
+                                        border-radius: 3px;
+
+                                        p {
+                                            text-align: center;
+                                            width: 100%;
+                                            font-size: 14px;
+                                            letter-spacing: 1px;
+                                            color: $main_Color2;
+
+                                            i {
+                                                position: absolute;
+                                                display: block;
+                                                top: 50%;
+                                                transform: translateY(-50%);
+                                                left: -8px;
+                                                border-style: solid;
+                                                border-width: 6px 8px 6px 0px;
+                                                border-color: transparent $remineBoder;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .amount {
+                                width: 100%;
+                                height: auto;
+                                box-sizing: border-box;
+                                padding-left: 11px;
+                                margin-bottom: 27px;
+                                font-size: 43px;
+                                color:$main_Color;
+                                font-weight: bold;
+                            }
+
+                            .lock {
+                                display: flex;
+                                font-size: 16px;
+                                color: $main_Color;
+                                font-weight: bold;
+
+                                p {
+                                    margin-right: 23px;
+                                    color: $main_Color;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_2;
+                    border-radius: 5px;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    position: relative;
+
+                    .tabs {
+                        position: absolute;
+                        top: -35px;
+                        padding: 0 24px;
+                        width: auto;
+                        height: auto;
+                        display: flex;
+
+                        li {
+                            min-width: 105px;
+                            height: 35px;
+                            line-height: 35px;
+                            margin-right: 7px;
+                            @include tabs_btn;
+                        }
+                    }
+
+                    .activeWallet,.historyWallet {
+                        display: none;
+                        width: 100%;
+                        height: auto;
+                        padding: 20px 14px 0;
+                        box-sizing: border-box;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        .title {
+                            font-weight: bold;
+                            font-size: 17px;
+                            color: $main_Color7;
+                            letter-spacing: 2px;
+                        }
+
+                        // .walletDetail {
+                        //     height: 390px;
+                        //     overflow: hidden;
+                        //     margin-top: 10px;
+
+                        //     li {
+                        //         border-bottom: solid 2px $main_Border;
+                        //         display: flex;
+                        //         align-items: center;
+                        //         justify-content: space-between;
+                        //         height: 50px;
+
+                        //         &.detailTitle {
+                        //             border-bottom: solid 2px $main_Border;
+                        //         }
+
+                        //         div {
+                        //             height: 17px;
+                        //             font-size: 13px;
+                        //             color: $main_Color;
+                        //             border-right: solid 1px $main_Border_2;
+                        //             display: flex;
+                        //             align-items: center;
+                        //             justify-content: center;
+                        //             text-align: center;
+                        //             letter-spacing: 1px;
+                        //             font-weight: bold;
+
+                        //             &:nth-of-type(1) {
+                        //                 width: 104px;
+                        //             }
+                        //             &:nth-of-type(2) {
+                        //                 width: 143px;
+                        //             }
+                        //             &:nth-of-type(3) {
+                        //                 width: 102px;
+                        //             }
+                        //             &:nth-of-type(4) {
+                        //                 position: relative;
+                        //                 width: 278px;
+
+                        //                 .percent {
+                        //                     display: block;
+                        //                     width: 250px;
+                        //                     position: absolute;
+                        //                     border: none;
+                        //                     top: -10px;
+                        //                     left: 12px;
+
+                        //                     .num {
+                        //                         width: 100%;
+                        //                         border: none;
+                        //                         justify-content: space-between;
+                        //                     }
+
+                        //                     .bar {
+                        //                         border: none;
+                        //                         width: 100%;
+                        //                         height: 5px;
+                        //                         justify-content: flex-start;
+                        //                         border-radius: 10px;
+                        //                         background: $mainBG_3;
+                        //                         overflow: hidden;
+                        //                         position: relative;
+
+                        //                         .cnt {
+                        //                             position: absolute;
+                        //                             top: 0px;
+                        //                             left: 0px;
+                        //                             width: 1%;
+                        //                             height: 100%;
+                        //                             border-radius: 10px;
+                        //                             background: $LV_Bg;
+                        //                         }
+                        //                     }
+
+                        //                     .remind {
+                        //                         font-size: 12px;
+                        //                         text-align: center;
+                        //                         width: 100%;
+                        //                         letter-spacing: 1px;
+                        //                         font-weight: bold;
+                        //                         margin-top: 3px;
+                        //                         color: $remindColor_Main;
+                        //                     }
+                        //                 }
+                        //             }
+                        //             &:nth-of-type(5) {
+                        //                 width: 212px;
+                        //                 border: none;
+
+                        //                 .record {
+                        //                     width: 71px;
+                        //                     height: 31px;
+                        //                     margin-right: 10px;
+                        //                     @include smallBtn;
+                        //                 }
+
+                        //                 .trans {
+                        //                     width: 97px;
+                        //                     height: 31px;
+                        //                     @include smallBtn_2;
+                        //                 }
+                        //             }
+                        //         }
+                        //     }
+
+                        //     .noData {
+                        //         display: none;
+                        //         width: 100%;
+                        //         height: 307px;
+                        //         align-items: center;
+                        //         justify-content: center;
+                        //         letter-spacing: 1px;
+                        //         font-size: 17px;
+                        //         font-weight: bold;
+                        //         color: $main_Color6;
+
+                        //         &.display {
+                        //             display: flex;
+                        //         }
+                        //     }
+                        // }
+                    }
+
+                    .platformWallet {
+                        display: none;
+                        padding: 21px 23px 8px;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        .title {
+                            font-size: 17px;
+                            letter-spacing: 2px;
+                            margin-bottom: 20px;
+                            color:$main_Color;
+                            font-weight: bold;
+                        }
+                        
+                        ul {
+                            min-height: 367px;
+                            overflow: hidden;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: flex-start;
+
+                            li {
+                                width: 158px;
+                                box-sizing: border-box;
+                                height: 100px;
+                                margin: 0 9px 9px 0;
+                                border-radius: 5px;
+                                border: solid 1px $main_Border_2;
+                                padding: 18px;
+
+                                &:nth-of-type(5n) {
+                                    margin-right: 0;
+                                }
+
+                                div {
+                                    font-size: 16px;
+                                    margin-bottom: 8px;
+                                    color: $main_Color;
+                                    font-weight: bold;
+                                }
+
+                                p {
+                                    font-size: 25px;
+                                    color:$main_Color;
+                                    font-weight: bold;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //.bankCard
+        .cardWrap {
+            display: flex;
+
+            .cardMiddle {
+                width: 880px;
+                margin-right: 15px;
+
+                .top {
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+
+                    .header {
+                        width: 100%;
+                        height: auto;
+                        padding: 10px 0 15px 20px;
+                        box-sizing: border-box;
+                        border-bottom: solid 1px $main_Border_2;
+
+                        span {
+                            font-size: 20px;
+                            letter-spacing: 2px;
+                            font-weight: bold;
+                            color: $main_Color;
+                        }
+                    }
+
+                    .content {
+                        width: 100%;
+                        height: 227px;
+                        padding: 15px 20px 22px;
+                        box-sizing: border-box;
+
+                        .title {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: space-between;
+
+                            span {
+                                font-size: 17px;
+                                font-weight: bold;
+                                letter-spacing: 2px;
+                                color:$main_Color;
+
+                                &:nth-of-type(2) {
+                                    font-size: 15px;
+                                    color: $main_Color6;
+                                    
+                                    span {
+                                        font-size: 15px;
+                                        color: $main_Color6;
+                                    }
+                                }
+                            }
+                        }
+
+                        .cardBox {
+                            width: 100%;
+                            height: 170px;
+                            margin-top: 5px;
+                            overflow-x: auto;
+
+                            .slider {
+                                padding-top: 10px;
+                                display: flex;
+
+                                .card {
+                                    width: 250px;
+                                    height: 150px;
+                                    border-radius: 10px;
+                                    box-sizing: border-box;
+                                    box-shadow: 0 2px 5px 2px $boxShadow_2;
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-right: 15px;
+
+                                    &:last-child {
+                                        margin: 0;
+                                    }
+                                    
+                                    &.empty {
+                                        background: $eMpty_Bg;
+                                        align-items: center;
+                                        justify-content: center;
+
+                                        .addCard_ic {
+                                            width: 45px;
+                                            height: 45px;
+                                        }
+
+                                        .text {
+                                            font-size: 14px;
+                                            letter-spacing: 1px;
+                                            color: $main_Color2;
+                                            font-weight: bold;
+                                            margin-top: 25px;
+                                        }
+                                    }
+
+                                    &.register {
+                                        background: $register_Bg;
+                                        border: solid 1px $register_Border;
+                                        padding: 15px 17px 0;
+
+                                        .name {
+                                            font-size: 22px;
+                                            letter-spacing: 2px;
+                                            font-weight: bold;
+                                            color: $main_Color2;
+                                        }
+
+                                        .branch {
+                                            margin-top: 10px;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            letter-spacing: 1px;
+                                            color: $main_Color2;
+                                        }
+
+                                        .account {
+                                            margin-top: 35px;
+
+                                            span {
+                                                font-size: 18px;
+                                                letter-spacing: 2px;
+                                                color: $main_Color2;
+                                                font-weight: bold;
+                                                letter-spacing: 2px;
+                                            }
+                                        }
+
+                                        .review {
+                                            width: 100%;
+                                            height: auto;
+                                            font-weight: bold;
+                                            text-align: center;
+                                            letter-spacing: 1px;
+                                            background: $mainBG_2;
+                                            color: $main_Color;
+                                            font-size: 16px;
+                                            border-radius: 5px;
+                                            margin-top: 4px;
+                                            padding: 2px 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bottomWrap {
+                    width: 100%;
+                    height: auto;
+                    margin-top: 10px;
+
+                    .bottom {
+                        width: 100%;
+                        height: auto;
+                        background: $mainBG_2;
+                        box-shadow: 0 5px 10px -5px $boxShadow_3;
+                        border-radius: 5px;
+                        box-sizing: border-box;
+                        padding: 15px 20px 35px;
+
+                        div {
+
+                            .title {
+                                font-size: 17px;
+                                letter-spacing: 2px;
+                                font-weight: bold;
+                                color: $main_Color;
+                            }
+
+                            .formBox {
+                                margin-top: 25px;
+                                width: 100%;
+                                height: auto;
+
+                                form {
+                                    width: 100%;
+                                    height: auto;
+
+                                    .content {
+                                        display: flex;
+                                        flex-direction: column;
+                                        width: 100%;
+                                        height: auto;
+
+                                        .row {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            margin-bottom: 35px;
+
+                                            .smallTitle {
+                                                width: 98px;
+                                                font-size: 14px;
+                                                display: flex;
+                                                align-items: center;
+                                                margin-right: 6px;
+                                                justify-content: flex-end;
+                                                padding-right: 20px;
+                                                box-sizing: border-box;
+
+                                                span {
+                                                    font-size: 14px;
+                                                    letter-spacing: 1px;
+                                                    font-weight: bold;
+                                                    color: $main_Color;
+                                                    white-space: nowrap;
+
+                                                    &::before {
+                                                        content: "※";
+                                                        font-size: 13px;
+                                                        margin-right: 5px;
+                                                        letter-spacing: 1px;
+                                                        color: $remindColor_Main;
+                                                    }
+                                                }
+                                            }
+
+                                            .inputBox {
+                                                position: relative;
+                                                width: 100%;
+                                                height: auto;
+
+                                                input {
+                                                    width: 258px;
+                                                    height: 42px;
+                                                    @include inputStyle;
+                                                }
+
+                                                .notable {
+                                                    background: $notable;
+                                                }
+
+                                                .err {
+                                                    display: none;
+                                                    font-size: 12px;
+                                                    padding-top: 3px;
+                                                    color: $remindColor_Main;
+
+                                                    &.display {
+                                                        display: block;
+                                                    }
+                                                }
+
+                                                small {
+                                                    font-size: 12px;
+                                                    letter-spacing: 1px;
+                                                    position: absolute;
+                                                    left: 0;
+                                                    bottom: -16px;
+                                                    color: $remindColor_Main;
+                                                }
+
+                                                button {
+                                                    width: 255px;
+                                                    height: 42px;
+                                                    margin: 20px 0 0 8px;
+                                                    @include mainBtn;
+                                                }
+
+                                                .upload-btn {
+                                                    width: 100%;
+                                                    height: auto;
+                                                    border: 1px solid #000;
+                                                    padding: 4px 10px;
+                                                    border-radius: 5px;
+                                                    font-size: 14px;
+                                                    cursor: pointer;
+                                                    @include smallBtn;
+                                                }
+                                                .notice {
+                                                    font-size: 12px;
+                                                    padding-top: 12px;
+                                                    color:$main_Color7;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //rightSide
+        .rightSide {
+            width: 245px;
+            height: auto;
+
+            .smallBoard {
+                width: 100%;
+                height: auto;
+                background: $mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                border-radius: 5px;
+                margin-bottom: 17px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                .title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    height: 43px;
+                    box-sizing: border-box;
+                    padding: 0 20px;
+                    border-bottom: solid 1px $main_Border_2;
+                    font-size: 16px;
+                    letter-spacing: 2px;
+                    color: $main_Color;
+                    font-weight: bold;
+
+                    .more {
+                        font-size: 14px;
+                        display: flex;
+                        align-items: center;
+                        letter-spacing: 1px;
+                        color: $main_Color;
+                        cursor: pointer;
+
+                        .arrow {
+                            width: 9px;
+                            height: 16px;
+                            margin-left: 7px;
+                            transform: scaleX(-1);
+                        }
+                    }
+                }
+
+                .list {
+                    width: 100%;
+                    height: 307px;
+                    overflow-y: auto;
+
+                    &.trans {
+                        height: 321px;
+                        box-sizing: border-box;
+                        padding: 15px 0px 42px;
+
+                        .transList {
+                            height: 53px;
+                            border-bottom: solid 1px $main_Border_2;
+                            margin-bottom: 13px;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0 10px;
+
+                            .transTitle {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin-bottom: 5px;
+                                height: 19px;
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                color: $main_Color;
+
+                                p {
+                                    color: $main_Color;
+                                }
+                            }
+
+                            .text {
+                                display: flex;
+                                align-items: center;
+                                height: 19px;
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                color: $main_Color;
+                                font-weight: bold;
+    
+                                .trans_arrow {
+                                    width: 15px;
+                                    height: 13px;
+                                    margin: 0 10px;
+                                    
+                                    &.go {
+                                        transform: scaleX(1);
+                                    }
+
+                                    &.back {
+                                        transform: scaleX(-1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .smallList {
+                        height: 84px;
+                        padding: 8px 18px 12px;
+                        border-bottom: solid 1px $main_Border_2;
+                        box-sizing: border-box;
+
+                        .smallTitle {
+                            font-size: 16px;
+                            letter-spacing: 1px;
+                            margin-bottom: 10px;
+                            font-weight: bold;
+                            color: $main_Color7;
+                        }
+
+                        ul {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+
+                            li {
+                                width: 50%;
+                                height: auto;
+
+                                p {
+                                    letter-spacing: 1px;
+                                    
+                                    &:nth-of-type(1) {
+                                        font-size: 12px;
+                                        font-weight: bold;
+                                        color:$main_Color3;
+                                    }
+
+                                    &:last-child {
+                                        font-size: 14px;
+                                        margin-top: 6px;
+                                        font-weight: bold;
+                                        color: $main_Color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .noData {
+                        display: none;
+                        width: 100%;
+                        height: 307px;
+                        align-items: center;
+                        justify-content: center;
+                        color: $main_Color6;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+
+                        &.display {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+
+        //mail
+        .mailWrap {
+            display: none;
+            width: 1140px;
+
+            &.display {
+                display: block
+            }
+
+            &.innerMode {
+                min-height: 900px;
+                padding: 32px 27px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                background: $mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+
+                .title {
+                    
+                    button {
+                        background: none;
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: $main_Color;
+                        display: flex;
+                        align-items: center;
+
+                        i {
+                            display: block;
+                            width: 9px;
+                            height: 16px;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+
+                .msgTitle {
+                    width: 100%;
+                    height: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 31px 0 11px 0;
+
+                    span {
+                        display: inline-block;
+                        width: 800px;
+                        font-size: 18px;
+                        color: $main_Color;
+                    }
+
+                    button {
+                        width: 40px;
+                        height: 29px;
+
+                        &.next {
+                            transform: scaleX(-1);
+                        }
+                    }
+                }
+
+                .date {
+                    width: 100%;
+                    font-size: 15px;
+                    color: $main_Color3;
+                    padding-bottom: 18px;
+                }
+
+                .msg {
+                    width: 100%;
+                    height: auto;
+                    padding: 22px 0;
+                    color: $main_Color;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+
+            .top {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                background:$mainBG_2;
+
+                p {
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding-left: 22px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $main_Color;
+                    border-bottom: solid 1px $main_Border_2;
+                }
+
+                div {
+                    width: 100%;
+                    height: 56px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 22px;
+                    box-sizing: border-box;
+
+                    a {
+                        width: 125px;
+                        height: 35px;
+                        margin-right: 10px;
+                        @include dateBtn;
+                        border-radius: 5px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .bottom {
+                display: none;
+                margin-top: 20px;
+
+                &.display {
+                    display: block;
+                }
+
+                .tabs {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 0 24px;
+                    display: flex;
+
+                    li {
+                        min-width: 105px;
+                        height: 35px;
+                        margin-right: 7px;
+                        line-height: 35px;
+                        @include tabs_btn;
+                    }
+                }
+
+                .list {
+                    background: $mainBG_2;
+                    box-shadow: 0px 5px 10px -5px $boxShadow_3;
+                    width: 100%;
+                    min-height: 638px;
+                    border-radius: 5px;
+
+                    .btnBox  {
+                        display: none;
+                        width: 100%;
+                        height: auto;
+                        padding-bottom: 16px;
+                        border-bottom: solid 1px $main_Border_2;
+
+                        &.nor {
+                            justify-content: flex-end;
+
+                            a {
+
+                                &:nth-of-type(1) {
+                                    width: 79px;
+                                    @include bet_btn;
+                                    line-height: 27px;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                }
+
+                                &:last-child {
+                                    width: 51px;
+                                    @include smallBtn;
+                                    line-height: 27px;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+
+                        &.edit {
+                            justify-content: space-between;
+
+                            span {
+                                display: flex;
+
+                                a {
+
+                                    &:nth-of-type(1){
+                                        @include mailreadBtn;
+                                    }
+    
+                                    &:nth-of-type(2) {
+                                        @include maildeleteBtn;
+                                    }
+                                }
+                            }
+
+                            a {
+                                width: 51px;
+                                
+                                &:last-child {
+                                    @include smallBtn;
+                                    font-size: 14px;
+                                    border-radius: 3px;
+                                    line-height: 25px;
+                                }
+                            }
+                        }
+
+                        &.display {
+                            display: flex;
+                        }
+
+                        a {
+                            display: inline-block;
+                            height: 29px;
+                            margin: 19px 19px 0 0;
+                        }
+
+                        .all {
+                            margin: 20px 34px 0 0;
+                            display: flex;
+                            align-items: center;
+                            color: $main_Color;
+                            font-size: 16px;
+
+                            input {
+                                position: relative;
+                                margin: 0 19px 0 24px;
+
+                                &::after {
+                                    content: "";
+                                    width: 16px;
+                                    height: 16px;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    background: $mainBG_2;
+                                    border-radius: 50%;
+                                    border: 2px solid $main_Color6;
+                                }
+
+                                &:checked {
+
+                                    &::before {
+                                        content: "";
+                                        width: 10px;
+                                        height: 10px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%,-50%);
+                                        background: $mainBG_1;
+                                        border-radius: 50px;
+                                        z-index: 2;
+                                        display: block;
+                                    }
+
+                                    &::after {
+                                        content: "";
+                                        width: 16px;
+                                        height: 16px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%,-50%);
+                                        background:$mainBG_2;
+                                        border-radius: 50%;
+                                        border: 2px solid $main_Color6;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    ul {
+
+                        li {
+                            height: 46px;
+                            display: flex;
+                            align-items: center;
+                            border-bottom: solid 1px $main_Border_2;
+                            cursor: pointer;
+
+                            &:hover,&:active,&.active {
+                                background:$mainBG_3;
+                            }
+
+                            .title {
+                                width: 70%;
+                                position: relative;
+                                box-sizing: border-box;
+                                padding: 0 33px 0 28px;
+                                color: $main_Color;
+                                font-weight: bold;
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    right: 0;
+                                    width: 1px;
+                                    height: 15px;
+                                    background: $main_Border_2;
+                                }
+                            }
+
+                            .date {
+                                width: 30%;
+                                text-align: center;
+                                color: $main_Color6;
+                            }
+                        }
+
+                        & .notRead {
+                            .title {
+                                color: $main_Color4;
+                            }
+    
+                            .date {
+                                width: 30%;
+                                text-align: center;
+                                color: $main_Color4;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        //以下無紀錄
+
+        //event
+        .eventWrap {
+            width: 1140px;
+
+            .title {
+                width: 100%;
+                height: auto;
+                background:$mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                border-radius: 5px;
+                margin-bottom: 20px;
+
+                h1 {
+                    width: 100%;
+                    box-sizing: border-box;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 22px;
+                    letter-spacing: 2px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: $main_Color;
+                }
+            }
+
+            .eventMiddle {
+
+                .tabs {
+                    width: 100%;
+                    height: auto;
+                    padding: 0 24px;
+                    box-sizing: border-box;
+                    display: flex;
+
+                    li {
+                        min-width: 105px;
+                        height: 35px;
+                        margin-right: 7px;
+                        line-height: 35px;
+                        @include tabs_btn;
+                    }
+                }
+                
+                .eventBox {
+                    display: none;
+                    width: 100%;
+                    min-height: 430px;
+                    box-sizing: border-box;
+                    padding: 18px 22px;
+                    background: $main_Color2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    
+                    &.display {
+                        display: flex;
+                    }
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+
+                        li {
+                            width: 100%;
+                            margin-bottom: 8px;
+                            border-radius: 3px;
+                            border: solid 1px $saleBorder;
+
+                            .header {
+                                width: 100%;
+                                height: 47px;
+                                border-bottom: solid 1px $main_Border_2;
+                                box-sizing: border-box;
+                                padding: 0 15px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                div {
+                                    display: flex;
+
+                                    p {
+                                        margin-right: 18px;
+                                        color: $main_Color;
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        white-space: nowrap;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &.first {
+                                            color: $jumpWindow_Date;
+                                        }
+
+                                        span {
+                                            color: $jumpWindow_Date;
+
+                                            &.now {
+                                                color: $bAseactive;
+                                            }
+
+                                            &.split {
+                                                margin: 0 10px;
+                                            }
+                                        }
+                                    }
+
+                                    button {
+                                        width: 75px;
+                                        height: 27px;
+                                        border-radius: 5px;
+                                        @include smallBtn;
+
+                                        &.apply {
+                                            margin-right: 8px;
+                                        }
+
+                                        &.check {
+                                            @include smallBtn2;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .content {
+                                width: 100%;
+                                height: auto;
+                                box-sizing: border-box;
+                                padding: 20px 15px;
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                ul {
+                                    display: flex;
+    
+                                    li {
+                                        display: flex;
+                                        width: 33.3%;
+                                        padding-bottom: 30px;
+                                        border: none;
+                                        margin: 0;
+    
+                                        p {
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            color: $main_Color;
+    
+                                            &.smallTitle {
+                                                margin-right: 25px;
+                                                color: $jumpWindow_Date;
+                                            }
+    
+                                            &.cur {
+                                                color: $bAseactive;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .eventBox2 {
+                    display: none;
+                    width: 100%;
+                    min-height: 430px;
+                    box-sizing: border-box;
+                    padding: 18px 22px;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    display: none;
+                    
+                    &.display {
+                        display: block;
+                    }
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+
+                        li {
+                            width: 100%;
+                            margin-bottom: 8px;
+                            border-radius: 3px;
+                            border: solid 1px $saleBorder;
+
+                            .header {
+                                width: 100%;
+                                height: 47px;
+                                border-bottom: solid 1px $main_Border_2;
+                                box-sizing: border-box;
+                                padding: 0 15px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+
+                                div {
+                                    display: flex;
+
+                                    p {
+                                        margin-right: 18px;
+                                        color: $main_Color;
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        white-space: nowrap;
+                                        display: flex;
+                                        align-items: center;
+
+                                        &.first {
+                                            color: $jumpWindow_Date;
+                                        }
+
+                                        span {
+                                            color: $jumpWindow_Date;
+
+                                            &.now {
+                                                color: $bAseactive;
+                                            }
+
+                                            &.split {
+                                                margin: 0 10px;
+                                            }
+                                        }
+                                    }
+
+                                    button {
+                                        width: 75px;
+                                        height: 27px;
+                                        @include smallBtn;
+                                        border-radius: 5px;
+
+                                        &.apply {
+                                            margin-right: 8px;
+                                        }
+
+                                        &.check {
+                                            @include smallBtn2;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .content {
+                                width: 100%;
+                                height: auto;
+                                box-sizing: border-box;
+                                padding: 20px 15px;
+                                display: flex;
+                                flex-wrap: wrap;
+
+                                ul {
+                                    display: flex;
+    
+                                    li {
+                                        display: flex;
+                                        width: 33.3%;
+                                        padding-bottom: 30px;
+                                        border: none;
+                                        margin: 0;
+    
+                                        p {
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            color:$main_Color;
+    
+                                            &.smallTitle {
+                                                margin-right: 25px;
+                                                color:$jumpWindow_Date;
+                                            }
+    
+                                            &.cur {
+                                                color: $bAseactive;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .eventRecord {
+                    display: none;
+                    width: 100%;
+                    min-height: 430px;
+                    box-sizing: border-box;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    .recordWrap {
+                        width: 100%;
+                        height: auto;
+
+                        .search {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 24px 18px 24px 24px;
+                            border-bottom: solid 1px $main_Border_2;
+
+                            form {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                position: relative;
+
+                                .bigBox {
+                                    width: 345px;
+                                    height: auto;
+
+                                    .inputBox {
+                                        width: 100%;
+                                        height: auto;
+                                        display: flex;
+                                        flex-direction: column;
+
+                                        .row {
+                                            width: 100%;
+                                            height: auto;
+                                            margin-bottom: 20px;
+                                            display: flex;
+                                            align-items: center;
+
+                                            &:last-child {
+                                                margin: 0;
+                                            }
+
+                                            .smallTitle {
+                                                font-size: 14px;
+                                                width: auto;
+                                                max-width: 48px;
+                                                margin-right: 25px;
+                                                letter-spacing: 1px;
+                                                color: $main_Color;
+                                                font-weight: bold;
+                                                text-align: right;
+                                            }
+
+                                            .fakeInput {
+                                                width: 286px;
+                                                height: auto;
+
+                                                select {
+                                                    width: 258px;
+                                                    height: 42px;
+                                                    @include select_Style;
+                                                }
+
+                                                input {
+                                                    width: 258px;
+                                                    height: 42px;
+                                                    @include inputStyle;
+                                                    padding: 15px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                .dateBtnBox {
+                                    display: flex;
+                                    align-items: flex-end;
+                                    width: auto;
+                                    height: auto;
+
+                                    button {
+                                        width: 72px;
+                                        height: 43px;
+                                        margin-right: 8px;
+                                        @include dateBtn;
+                                    }
+                                }
+
+                                .checkBtn {
+                                    position: absolute;
+                                    right: 0px;
+                                    bottom: 0px;
+
+                                    button {
+                                        width: 152px;
+                                        height: 41px;
+                                        @include mainBtn;
+                                    }
+                                }
+                            }
+                        }
+
+                        .tableWrap {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 22px 0 22px;
+
+                            .tableTitle {
+                                font-size: 17px;
+                                font-weight: bold;
+                                letter-spacing: 2px;
+                                color: $main_Color7;
+                                padding-left: 15px;
+                            }
+
+                            table {
+                                width: 100%;
+
+                                tr {
+
+                                    th {
+                                        height: 50px;
+                                        vertical-align: middle;
+                                        letter-spacing: 1px;
+                                        color:$main_Color;
+                                        border-bottom: solid 2px $specailBorder;
+                                        font-size: 13px;
+                                        font-weight: bold;
+                                    }
+
+                                    td {
+                                        height: 50px;
+                                        vertical-align: middle;
+                                        font-size: 13px;
+                                        color: $main_Color;
+                                        text-align: center;
+                                        border-bottom: solid 2px $table_Td_Border;
+                                    }
+                                }
+                            }
+
+                            .noData {
+                                display: none;
+                                width: 100%;
+                                height: 248px;
+                                align-items: center;
+                                justify-content: center;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                                color: $main_Color6;
+
+                                &.display {
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //dealRecord
+        .dealWrap {
+            width: 1140px;
+
+            .top {
+                width: 100%;
+                height: 50px;
+                background: $mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                color:$main_Color;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 0 22px;
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: 2px;
+                border-radius: 5px;
+            }
+
+            .bottom {
+                width: 100%;
+                height: auto;
+                margin-top: 20px;
+
+                .header {
+                    width: 100%;
+                    height: auto;
+
+                    .tabs {
+                        width: 100%;
+                        height: auto;
+                        box-sizing: border-box;
+                        padding: 0 24px;
+                        display: flex;
+
+                        li {
+                            min-width: 105px;
+                            height: 35px;
+                            line-height: 35px;
+                            margin: 0 7px 0 0;
+                            @include  tabs_btn;
+                        }
+                    }
+                }
+
+                .dealBox {
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+                    display: none;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    .reviewWrap {
+                        width: 100%;
+                        height: auto;
+
+                        .search {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 24px 18px 24px 24px;
+                            border-bottom: solid 1px $main_Border_2;
+
+                            form {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                position: relative;
+
+                                .bigBox {
+                                    width: 345px;
+                                    height: auto;
+
+                                    .innerBox {
+                                        width: 100%;
+                                        height: auto;
+
+                                        .row {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            align-items: center;
+                                            margin-bottom: 20px;
+
+                                            &:last-child {
+                                                margin: 0;
+                                            }
+
+                                            .smallTitle {
+                                                width: auto;
+                                                max-width: 48px;
+                                                font-size: 14px;
+                                                margin-right: 25px;
+                                                letter-spacing: 1px;
+                                                color: $main_Color;
+                                                font-weight: bold;
+                                            }
+
+                                            .inputBox {
+                                                width: 286px;
+                                                height: auto;
+
+                                                select {
+                                                    width: 258px;
+                                                    height: 42px;
+                                                    @include select_Style;
+                                                }
+
+                                                input {
+                                                    width: 258px;
+                                                    height: 42px;
+                                                    @include inputStyle;
+                                                    padding: 0 15px;
+                                                    box-sizing: border-box;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btnBox {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+                                    align-items: flex-end;
+
+                                    button {
+                                        width: 72px;
+                                        height: 43px;
+                                        margin-right: 8px;
+                                        @include dateBtn;
+                                    }
+                                }
+
+                                .checkBtn {
+                                    width: auto;
+                                    height: auto;
+                                    position: absolute;
+                                    right: 0px;
+                                    bottom: 0px;
+
+                                    button {
+                                        width: 152px;
+                                        height: 41px;
+                                        @include mainBtn;
+                                    }
+                                }
+                            }
+                        }
+
+                        .fakeTable {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 0 0px 10px;
+
+                            .noData {
+                                display: none;
+                                width: 100%;
+                                height: 233px;
+                                align-items: center;
+                                justify-content: center;
+                                letter-spacing: 1px;
+                                color: $main_Color6;
+                                font-weight: bold;
+
+                                &.display {
+                                    display: flex;
+                                }
+                            }
+
+                            table {
+                                width: 100%;
+                                height: auto;
+                                margin: 20px 0 60px;
+
+                                tr {
+
+                                    th,td {
+                                        height: 50px;
+                                        vertical-align: middle;
+                                        text-align: center;
+                                        font-size: 13px;
+                                        letter-spacing: 1px;
+                                        font-weight: bold;
+                                        color: $main_Color;
+                                        position: relative;
+                                        border-bottom: solid 2px $specailBorder;
+
+                                        &:last-child {
+
+                                            &::before {
+                                                display: none;
+                                            }
+                                        }
+
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            width: 1px;
+                                            height: 50%;
+                                            transform: translateY(-50%);
+                                            top: 50%;
+                                            right: 0px;
+                                            background: $main_Border_2;
+                                        }
+                                    }
+
+                                    td {
+                                        width: 25%;
+                                        border-bottom: 1px solid $main_Border_2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .dealBox2 {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    min-height: 440px;
+                    background: $mainBG_2;
+                    box-shadow: 0px 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    padding: 20px 0px 24px;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    h1 {
+                        padding: 20px 24px;
+                        font-size: 17px;
+                        letter-spacing: 2px;
+                        color: $main_Color7;
+                        font-weight: bold;
+                    }
+                    table {
+                        width: 100%;
+                        height: auto;
+                        margin: 20px 0 7px;
+
+                        tr {
+
+                            border-bottom: 1px solid $main_Border_2;
+
+                            th,td {
+                                height: 50px;
+                                vertical-align: middle;
+                                text-align: center;
+                                font-size: 13px;
+                                letter-spacing: 1px;
+                                font-weight: bold;
+                                color: $main_Color;
+                                position: relative;
+                                border-bottom: solid 2px $specailBorder;
+
+                                &:last-child {
+
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 1px;
+                                    height: 42%;
+                                    transform: translateY(-50%);
+                                    top: 50%;
+                                    right: 0px;
+                                    background:$main_Border_2;
+                                }
+                            }
+
+                            td {
+                                border-bottom: none;
+
+                                &.wNo {
+                                    width: 13%;
+                                }
+                                &.wStatus {
+                                    width: 14%;
+                                }
+
+                                &.wVal {
+                                    width: 13%;
+                                    color:$main_Color4;
+                                }
+                                &.wLimit {
+                                    width: 13%;
+                                }
+                                &.wShift {
+                                    width: 13%;
+                                    color: $bAseactive;
+                                }
+                                &.wDate {
+                                    width: 14.5%;
+                                }
+                                &.wDrawback {
+                                    width: 9.5%;
+                                }
+                                &.wBethistory {
+                                    width: 6%;
+                                }
+                                &.wPs {
+                                    width: 5%;
+                                }
+
+                                &::before {
+                                    display: none;
+                                }
+
+                                .d-btn {
+                                    width: 50px;
+                                    height: 30px;
+                                    border-radius: 3px;
+                                    cursor: no-drop;
+                                    @include disable;
+                                }
+                                .b-btn {
+                                    width: 50px;
+                                    height: 30px;
+                                    border-radius: 3px;
+                                    @include bet_btn;
+                                }
+
+                                .expand-btn {
+                                    background: none;
+                                    font-size: 22px;
+                                    font-weight: bolder;
+                                    height: 30px;
+                                    line-height: 40px;
+                                    color: $main_Color3;
+                                }
+                            }
+                        }
+                    }
+
+                    .noData {
+                        display: none;
+                        width: 100%;
+                        height: 533px;
+                        justify-content: center;
+                        align-items: center;
+                        letter-spacing: 1px;
+                        color: $main_Color6;
+                        font-weight: bold;
+
+                        &.display {
+                            display: flex;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        //betRecord
+        .betWrap {
+            width: 1140px;
+            height: auto;
+            padding: 15px 0 28px;
+            background: $mainBG_2;
+            box-shadow: 0 5px 10px -5px $boxShadow_3;
+            border-radius: 5px;
+
+            form {
+                width: 100%;
+                height: auto;
+
+                .title {
+                    padding-left: 23px;
+                    margin-bottom: 28px;
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    color: $main_Color;
+                    font-weight: bold;
+                }
+
+                .inputGroup {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding-left: 25px;
+                    margin-bottom: 17px;
+
+                    p {
+                        margin-right: 25px;
+                        font-size: 14px;
+                        letter-spacing: 1px;
+                        color: $main_Color;
+                        font-weight: bold;
+                    }
+
+                    select {
+                        width: 287px;
+                        height: 43px;
+                        margin-right: 30px;
+                        @include select_Style;
+                    }
+                }
+
+                .timeGroup {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 19px 0 25px;
+                    margin-bottom: 25px;
+
+                    .timeBox {
+                        display: flex;
+                        align-items: center;
+                        
+                        p {
+                            margin-right: 25px;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            color: $main_Color;
+                            font-weight: bold;
+
+                            &.remind {
+                                color: $remindColor_Main;
+                            }
+                        }
+
+                        input {
+                            width: 287px;
+                            height: 43px;
+                            margin-right: 30px;
+                            @include inputStyle;
+                            padding: 0 15px;
+                        }
+
+                        .btnBox {
+                            display: flex;
+
+                            button {
+                                width: 72px;
+                                height: 43px;
+                                margin-right: 8px;
+                                @include dateBtn;
+
+                                &:last-child {
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                    }
+
+                    .checkBtn {
+                        width: 152px;
+                        height: 43px;
+                        @include mainBtn;
+                    }
+                }
+            }
+
+            .fakeTable {
+                width: 100%;
+                height: auto;
+                margin: 15px 0 30px;
+
+                ul {
+                    width: 100%;
+                    height: auto;
+
+                    li {
+                        width: 100%;
+                        height: 40px;
+                        border-bottom: solid 1px $main_Border_2;
+
+                        &.title {
+                            border-bottom: solid 2px $specailBorder; 
+
+                            p {
+                                
+                                &::before {
+                                    display: none;
+                                }
+                            }
+                        }
+
+                        &.active {
+                            height: auto;
+                            background: $mainBG_3;
+
+                            .wordWrap {
+                                height: 40px;
+                                border-bottom: solid 1px $main_Border_2;
+                                background: $mainBG_2;
+
+                                .arrow_ic {
+                                    transform: rotate(90deg);
+                                }
+                            }
+
+                            table {
+                                display: table;
+                            }
+                        }
+
+                        .wordWrap {
+                            display: flex;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+
+                            p {
+                                position: relative;
+                                color: $main_Color;
+                                font-weight: bold;
+                                font-size: 14px;
+                                text-align: center;
+    
+                                &:nth-of-type(1),
+                                &:nth-of-type(2),
+                                &:nth-of-type(3) {
+                                    width: 24%;
+                                }
+    
+                                &:nth-of-type(4),
+                                &:nth-of-type(5) {
+                                    width: 11%;
+                                }
+    
+                                &:last-child {
+                                    width: 6%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    cursor: pointer;
+    
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+    
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    right: 0px;
+                                    width: 1px;
+                                    height: 40px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                    background:$main_Border_2;
+                                }
+    
+                                &.result {
+                                    color:$main_Color4;
+                                }
+    
+                                .arrow_ic {
+                                    display: block;
+                                    width: 9px;
+                                    height: 16px;
+                                    transform: rotate(-90deg);
+                                }
+                            }
+                        }
+
+                        table {
+                            display: none;
+                            width: 97%;
+                            margin: 15px auto;
+                            overflow: hidden;
+                            background: $table_BG;
+                            box-shadow: 0 5px 10px -5px $boxShadow_3;
+                            border-radius: 5px;
+
+                            tr {
+
+                                &:last-child {
+
+                                    td {
+                                        border: none;
+                                    }
+                                }
+
+                                th {
+                                    font-size: 13px;
+                                    font-weight: bold;
+                                    background:$table_Th_Bg;
+                                    color: $table_Th_color;
+                                    text-align: center;
+                                    height: 40px;
+                                    vertical-align: middle;
+                                    border-bottom: 1px solid $specailBorder;
+                                }
+                                
+                                td {
+                                    font-weight: bold;
+                                    font-size: 14px;
+                                    color: $main_Color;
+                                    text-align: center;
+                                    height: 40px;
+                                    vertical-align: middle;
+                                    border-bottom: solid 1px $table_Td_Border;
+
+                                    &:nth-of-type(1),
+                                    &:nth-of-type(7) {
+                                        width: 15%;
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        width: 10%;
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        width: 30%;
+                                    }
+
+                                    &:nth-of-type(4),
+                                    &:nth-of-type(5) {
+                                        width: 8%;
+                                    }
+
+                                    &:nth-of-type(6) {
+                                        width: 14%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .noData {
+                display: none;
+                width: 100%;
+                height: 348px;
+                margin-top: 20px;
+                align-items: center;
+                justify-content: center;
+                letter-spacing: 1px;
+                color: $main_Color3;
+                font-weight: bold;
+
+                &.display {
+                    display: flex;
+                }
+            }
+        }
+
+        //deposit
+        .depositWrap {
+            display: flex;
+
+            .depositMiddle {
+                width: 880px;
+                height: auto;
+                margin-right: 15px;
+
+                .top {
+                    width: 100%;
+                    height: 108px;
+                    margin-bottom: 15px;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+
+                    .title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 50px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        padding: 0 18px 0 22px;
+                        border-bottom: solid 1px $main_Border_2;
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                        font-weight: bold;
+
+                        button {
+                            width: 105px;
+                            height: 31px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            justify-content: center;
+                            white-space: nowrap;
+                            background: none;
+                            @include smallBtn;
+
+                            i {
+                                display: block;
+                                width: 18px;
+                                height: 18px;
+                                margin: 0 5px -2px 0;
+                            }
+                        }
+                    }
+
+                    .list {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        height: 56px;
+                        width: 100%;
+                        box-sizing: border-box;
+                        padding: 0 20px;
+
+                        i {
+                            display: block;
+                            width: 10px;
+                            height: 17px;
+                            cursor: pointer;
+
+                            &.next {
+                                transform: scaleX(-1);
+                            }
+                        }
+
+                        .box {
+                            width: 95%;
+                            height: auto;
+                            overflow: hidden;
+
+                            ul {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+
+                                li {
+                                    width: 127px;
+                                    height: 36px;
+                                    margin-right: 10px;
+                                    @include deposit_Btn;
+
+                                    i {
+                                        width: 27px;
+                                        height: 27px;
+                                        margin-right: 8px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    height: auto;
+                    padding: 16px 0 56px 27px;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    display: none;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    .title {
+                        font-size: 17px;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                        font-weight: bold;
+                    }
+
+                    .content {
+                        margin-top: 26px;
+
+                        form {
+                            width: 100%;
+                            height: auto;
+
+                            .row {
+                                display: flex;
+                                align-items: center;
+                                height: 41px;
+                                margin-bottom: 22px;
+                                font-weight: bold;
+                                font-size: 15px;
+                                color:$main_Color;
+                                position: relative;
+
+                                i {
+                                    font-size: 16px;
+                                    color: $remindColor_Main;
+                                    margin-right: 5px;
+                                }
+
+                                select {
+                                    width: 257px;
+                                    height: 41px;
+                                    margin-left: 26px;
+                                    @include select_Style;
+                                }
+
+                                input {
+                                    width: 257px;
+                                    height: 41px;
+                                    margin-left: 26px;
+                                    @include inputStyle;
+                                }
+
+                                .remind {
+                                    position: absolute;
+                                    bottom: -17px;
+                                    left: 108px;
+                                    font-size: 12px;
+                                    letter-spacing: 1px;
+                                    color: $remindColor_Main;
+                                }
+                            }
+
+                            button {
+                                width: 257px;
+                                height: 41px;
+                                margin: 46px 0 0 108px;
+                                @include mainBtn;
+                            }
+                        }
+
+                        .remindBox {
+                            width: 839px;
+                            height: auto;
+                            padding: 15px 19px;
+                            margin: 39px 0 0 -10px;
+                            border: solid 1px $remineBoder;
+                            box-sizing: border-box;
+
+                            div {
+                                color: $remineText;
+                                font-size: 13px;
+                                letter-spacing: 1px;
+                                margin-bottom: 11px;
+
+                                &.title {
+                                    color:$remineTitle;
+                                }
+                            }
+                        }
+                    }
+                }
+                .confirm {
+    
+                    .content {
+
+                        .confin_box {
+                            width: 100%;
+                            height: auto;
+
+                            span {
+                                color: $main_Color;
+                                font-size: 15px;
+                                font-weight: bold;
+                            }
+                            .confin_name {
+                                color: $main_Color;
+                                font-size: 16px;
+                                margin: 25px 0 0 92px;
+                                font-weight: bold;
+                            }
+                            .confin_name2 {
+                                color: $main_Color;
+                                font-size: 16px;
+                                font-weight: bold;
+                                margin: -14px 0 0 138px;
+                            }
+
+                            .confin_number {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                font-weight: bold;
+                                line-height: 2.5;
+                                margin-top: 15px;
+                                align-items: center;
+
+
+                                .number_num1 {
+                                    color: $main_Color6;
+                                    font-size: 14px;
+                                    text-align: right;
+                                }
+                                .number_num {
+                                    color: $main_Color;
+                                    font-size: 15px;
+                                    padding: 0 18px;
+                                }
+                                button {
+                                    @include smallBtn;
+                                    font-size: 12px !important;
+                                    width: 95px;
+                                    height: 27px;
+                                    margin: 0;
+
+                                    &:hover,&:active,&.active {
+                                        background: none;
+                                    }
+                                }
+                            }
+
+                            button {
+                                width: 257px;
+                                height: 41px;
+                                font-size: 14px;
+                                @include mainBtn;
+                                margin: 25px 0 0 108px;
+                            }
+                        }
+                        .remindBox {
+                            width: 839px;
+                            height: auto;
+                            padding: 15px 19px;
+                            margin: 39px 0 0 -10px;
+                            border: solid 1px $remineBoder;
+                            box-sizing: border-box;
+
+                            div {
+                                color: $remineText;
+                                font-size: 13px;
+                                letter-spacing: 1px;
+                                margin-bottom: 11px;
+
+                                &.title {
+                                    color: $remineTitle;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //invite 邀請會員
+        .inviteWrap {
+            display: flex;
+
+            .inviteMiddle {
+                width: 1140px;
+                height: auto;
+                margin-right: 15px;
+                padding: 0 10px;
+
+                .invite_bg {
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 15px;
+                    padding-top: 12px;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+
+                    .title {
+                        padding-left: 23px;
+                        margin-bottom: 9px;
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                        font-weight: bold;
+                    }
+
+                    .content {
+                        width: 100%;
+                        height: auto;
+                        padding: 15px 22px 18px;
+
+                       .invitebox {
+                           height: auto;
+                           width: 100%;
+                           display: flex;
+                           margin-bottom: 20px;
+
+                           ::marker {
+                               color: transparent;
+                           }
+
+                           .left {
+                               width: 50%;
+
+                               .li {
+
+                                margin-bottom: 20px;
+
+
+                                span {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    margin: 0 25px 20px 0 ;
+
+                                    button {
+                                        width: 94px;
+                                        height: 27px;
+                                        margin-left: 20px;
+                                        border-radius: 3px;
+                                        @include smallBtn;
+                                    }
+
+                                    input {
+                                       padding: 4px 15px;
+                                       @include inputStyle;
+                                    }
+                                }
+                            }
+
+                               
+                           }
+
+                           .right {
+                               width: 50%;
+                               display: flex;
+
+                               .forQR {
+                                   margin-top: 10px;
+
+                                span {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    margin-right: 10px;
+                                }
+
+                                h1 {
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    margin: 5px 0 0 22px;
+                                }
+
+
+                            }
+                               .qrCode {
+                                width: 100px;
+                                height: 100px;
+                                margin: -15px 0px 0 60px;
+                              }
+                           }
+                       }
+
+                        .inviteimg {
+                            height:485px;
+                            margin-bottom: 15px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+
+        //transfer
+        .transferWrap {
+            display: flex;
+
+            .transferMiddle {
+                width: 880px;
+                height: auto;
+                margin-right: 15px;
+                background: $mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                border-radius: 5px;
+
+                .title {
+                    width: 100%;
+                    height: 50px;
+                    box-sizing: border-box;
+                    padding: 0 22px;
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        color: $main_Color;
+                        font-size: 20px;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                    }
+                }
+
+                .wallet {
+                    width: 100%;
+                    height: 130px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .centerWallet {
+                        width: 49%;
+                        height: 100%;
+                        padding: 18px 25px 0;
+                        box-sizing: border-box;
+
+                        .walletTitle {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            p {
+                                display: flex;
+                                align-items: center;
+                                font-size: 17px;
+                                letter-spacing: 2px;
+                                color: $main_Color7;
+                                font-weight: bold;
+
+                                .reset_ic {
+                                    display: block;
+                                    width: 16px;
+                                    height: 16px;
+                                    margin-left: 6px;
+                                }
+                            }
+
+                            button {
+                                width: 92px;
+                                height: 23px;
+                                @include mainBtn;
+                            }
+                        }
+
+                        .amount {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 13px 0 0 10px;
+                            font-size: 43px;
+                            font-weight: bold;
+                            color: $main_Color;
+                        }
+                    }
+
+                    .line {
+                        width: 1px;
+                        height: 80px;
+                        background: $mainBG_2;
+                    }
+
+                    .activeWallet {
+                        width: 49%;
+                        height: 100%;
+                        box-sizing: border-box;
+                        padding: 18px 25px 0;
+
+                        .walletTitle {
+
+                            p {
+                                font-size: 17px;
+                                letter-spacing: 2px;
+                                font-weight: bold;
+                                color: $remindColor_Main;
+                            }
+                        }
+
+                        .amount {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 13px 0 0 10px;
+                            font-size: 43px;
+                            font-weight: bold;
+                            color: $main_Color7;
+                        }
+                    }
+                }
+
+                .platform {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                    padding: 21px 23px 0;
+                    
+                    .platformTitle {
+                        font-size: 17px;
+                        font-weight: bold;
+                        letter-spacing: 2px;
+                        margin-bottom: 20px;
+                        color: $main_Color;
+                    }
+
+                    ul {
+                        width: 100%;
+                        height: 97px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        overflow: hidden;
+
+                        &.active {
+                            height: auto;
+                        }
+
+                        li {
+                           width: 196px;
+                           height: 97px;
+                           box-sizing: border-box;
+                           padding: 18px;
+                           margin: 0 16px 16px 0;
+                           border: solid 1px $main_Border_2;
+                           border-radius: 5px;
+
+                           &:nth-of-type(4n) {
+                               margin-right: 0;
+                           }
+
+                           .name {
+                               margin-bottom: 5px;
+                               font-size: 16px;
+                               color: $main_Color;
+                            }
+
+                            .amount {
+                                font-size: 25px;
+                                font-weight: bold;
+                                color: $main_Color;
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+
+                    .open {
+                        width: 100%;
+                        height: auto;
+                        padding: 23px 0 35px;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        button {
+                            color: $main_Color;
+                            background: none;
+                            display: flex;
+                            align-items: center;
+                            font-size: 13px;
+
+                            i {
+                                display: block;
+                                width: 14px;
+                                height: 14px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+
+                form {
+                    width: 100%;
+                    height: auto;
+                    box-sizing: border-box;
+                   margin: 25px 0 20px 25px;
+                    // padding: 25px 0 36px 27px;
+
+                    .formTitle {
+                        display: flex;
+                        align-items: flex-end;
+                        margin-bottom: 25px;
+                        font-size: 17px;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                        font-weight: bold;
+
+                        .remind {
+                            margin-left: 25px;
+                            font-size: 14px;
+                            letter-spacing: 1px;
+                            color: $remindColor_Main;
+                        }
+                    }
+
+                    .platformBox {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: 690px;
+                        height: auto;
+                        margin-bottom: 20px;
+
+                        p {
+                            width: 56px;
+                            text-align: center;
+                            font-size: 14px;
+                            color: $main_Color;
+                            font-weight: bold;
+                        }
+
+                        .trans_ic {
+                            display: block;
+                            width: 27px;
+                            height: 23px;
+                        }
+
+                        select {
+                            width: 256px;
+                            height: 42px;
+                            @include select_Style;
+                        }
+                    }
+                    .platformBox2 {
+                        display: flex;
+                        align-items: center;
+                        justify-content: left;
+                        width: 690px;
+                        height: auto;
+                        margin-bottom: 20px;
+                        p {
+                            width: 56px;
+                            text-align: center;
+                            font-size: 14px;
+                            color: $main_Color;
+                            font-weight: bold;
+                        }
+
+                        .trans_ic {
+                            display: block;
+                            width: 27px;
+                            height: 23px;
+                        }
+
+                        select {
+                            width: 256px;
+                            height: 42px;
+                            margin-left: 32px;
+                            @include select_Style;
+                        }
+                    }
+
+                    .row {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        height: 42px;
+                        margin: 0 0 0 87px;
+                        justify-content: left;
+    
+                        &.forBtn {
+                            height: auto;
+                        }
+    
+                        p {
+                            width: 120px;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: $main_Color;
+                        }
+    
+                        input {
+                            width: 267px;
+                            height: 42px;
+                            @include inputStyle;
+                        }
+    
+                        .trans_arrow {
+                            display: block;
+                            width: 24px;
+                            height: 21px;
+                            transform: rotate(90deg);
+                            margin-left: 120px;
+                        }
+    
+                        .btnBox {
+                            width: 267px;
+                            height: auto;
+    
+                            button {
+                                width: 85px;
+                                height: 32px;
+                                @include much_Btn;
+                                margin: 0 2px 6px 0;
+    
+                                &:nth-of-type(3n) {
+                                    margin-right: 0;
+    
+                                }
+                            }
+                        }
+                        
+                        .check {
+                            width: 267px;
+                            height: 42px;
+                            @include mainBtn;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    button {
+                        width: 255px;
+                        height: 42px;
+                        margin: 20px 0 0 90px;
+                        @include mainBtn;
+                    }
+                }
+
+                // .activeAccount {
+                //     width: 100%;
+                //     height: auto;
+                //     padding: 20px 14px 0;
+                //     box-sizing: border-box;
+
+                //     .accountTitle {
+                //         letter-spacing: 2px;
+                //         font-size: 17px;
+                //         font-weight: bold;
+                //         color: $main_Color7;
+                //     }
+
+                //     ul {
+                //         margin-top: 10px;
+
+                //         li {
+                //             display: flex;
+                //             align-items: center;
+                //             justify-content: space-between;
+                //             width: auto;
+                //             height: 50px;
+                //             border-bottom: solid 2px $main_Border;
+
+                //             &.listTitle {
+                //                 border-color: $main_Border;
+                //             }
+
+                //             div {
+                //                 border-right: solid 1px $main_Border;
+                //                 display: flex;
+                //                 align-items: center;
+                //                 justify-content: center;
+                //                 height: 17px;
+                //                 font-size: 13px;
+                //                 letter-spacing: 1px;
+                //                 color: $main_Color;
+
+                //                 &:nth-of-type(1) {
+                //                     width: 104px;
+                //                 }
+                //                 &:nth-of-type(2) {
+                //                     width: 143px;
+                //                 }
+                //                 &:nth-of-type(3) {
+                //                     width: 102px;
+                //                 }
+                //                 &:nth-of-type(4) {
+                //                     width: 278px;
+                //                 }
+                //                 &:nth-of-type(5) {
+                //                     width: 212px;
+                //                     border: none;
+                //                 }
+                //             }
+                //         }
+
+                //         .noData {
+                //             display: none;
+                //             width: 100%;
+                //             height: 307px;
+                //             align-items: center;
+                //             justify-content: center;
+                //             letter-spacing: 1px;
+                //             font-weight: bold;
+                //             font-size: 17px;
+                //             color: $main_Color6;
+
+                //             &.display {
+                //                 display: flex;
+                //             }
+                //         }
+                //     }
+                // }
+            }
+        }
+
+        //dividend 查詢紅利
+        .dividendWrap {
+            width: 1140px;
+
+            .top {
+                width: 100%;
+                height: 50px;
+                background: $mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                color:$main_Color;
+                display: flex;
+                align-items: center;
+                box-sizing: border-box;
+                padding: 0 22px;
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: 2px;
+                border-radius: 5px 5px 0 0;
+            }
+
+            .bottom {
+                width: 100%;
+                height: auto;
+
+                .header {
+                    width: 100%;
+                    height: auto;
+
+                    .tabs {
+                        width: 100%;
+                        height: auto;
+                        box-sizing: border-box;
+                        padding: 0 24px;
+                        display: flex;
+
+                        li {
+                            min-width: 105px;
+                            height: 35px;
+                            line-height: 35px;
+                            margin: 0 7px 0 0;
+                            @include  tabs_btn;
+                        }
+                    }
+                }
+
+                .dealBox {
+                    width: 100%;
+                    height: auto;
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 0 0 5px 5px;
+                    display: none;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    .reviewWrap {
+                        width: 100%;
+                        height: auto;
+
+                        .search {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 10px 18px 24px 24px;
+                            border-bottom: solid 1px $main_Border_2;
+
+                            form {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                position: relative;
+
+                                .bigBox {
+                                    width: 345px;
+                                    height: auto;
+
+                                    .innerBox {
+                                        width: 100%;
+                                        height: auto;
+
+                                        .row {
+                                            width: 100%;
+                                            height: auto;
+                                            display: flex;
+                                            align-items: center;
+                                            margin-bottom: 20px;
+
+                                            &:last-child {
+                                                margin: 0;
+                                            }
+
+                                            .smallTitle {
+                                                width: auto;
+                                                max-width: 48px;
+                                                font-size: 14px;
+                                                margin-right: 25px;
+                                                letter-spacing: 1px;
+                                                color: $main_Color;
+                                                font-weight: bold;
+                                            }
+
+                                            .inputBox {
+                                                width: 286px;
+                                                height: auto;
+
+                                                select {
+                                                    width: 258px;
+                                                    height: 42px;
+                                                    @include select_Style;
+                                                }
+
+                                                input {
+                                                    width: 258px;
+                                                    height: 42px;
+                                                    @include inputStyle;
+                                                    padding: 0 15px;
+                                                    box-sizing: border-box;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .btnBox {
+                                    width: auto;
+                                    height: auto;
+                                    display: flex;
+                                    align-items: flex-end;
+
+                                    button {
+                                        width: 72px;
+                                        height: 43px;
+                                        margin-right: 8px;
+                                        @include dateBtn;
+                                    }
+                                }
+
+                                .checkBtn {
+                                    width: auto;
+                                    height: auto;
+                                    position: absolute;
+                                    right: 0px;
+                                    bottom: 0px;
+
+                                    button {
+                                        width: 152px;
+                                        height: 41px;
+                                        @include mainBtn;
+                                    }
+                                }
+                            }
+                        }
+
+                        .fakeTable {
+                            width: 100%;
+                            height: auto;
+                            box-sizing: border-box;
+                            padding: 0 0px 10px;
+
+                            .noData {
+                                display: none;
+                                width: 100%;
+                                height: 233px;
+                                align-items: center;
+                                justify-content: center;
+                                letter-spacing: 1px;
+                                color: $main_Color6;
+                                font-weight: bold;
+
+                                &.display {
+                                    display: flex;
+                                }
+                            }
+
+                            table {
+                                width: 100%;
+                                height: auto;
+                                margin: 20px 0 60px;
+
+                                tr {
+
+                                    th,td {
+                                        height: 50px;
+                                        vertical-align: middle;
+                                        text-align: center;
+                                        font-size: 13px;
+                                        letter-spacing: 1px;
+                                        font-weight: bold;
+                                        color: $main_Color;
+                                        position: relative;
+                                        border-bottom: solid 2px $specailBorder;
+
+                                        &:last-child {
+
+                                            &::before {
+                                                display: none;
+                                            }
+                                        }
+
+                                        &::before {
+                                            content: "";
+                                            position: absolute;
+                                            width: 1px;
+                                            height: 50%;
+                                            transform: translateY(-50%);
+                                            top: 50%;
+                                            right: 0px;
+                                            background:$main_Border_2;
+                                        }
+                                    }
+
+                                    td {
+                                        width: 25%;
+                                        border-bottom: 1px solid $main_Border_2;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .dealBox2 {
+                    display: none;
+                    width: 100%;
+                    height: auto;
+                    min-height: 440px;
+                    background: $mainBG_2;
+                    box-shadow: 0px 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                    padding: 20px 0px 24px;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    h1 {
+                        padding: 20px 24px;
+                        font-size: 17px;
+                        letter-spacing: 2px;
+                        color: $main_Color7;
+                        font-weight: bold;
+                    }
+                    table {
+                        width: 100%;
+                        height: auto;
+                        margin: 20px 0 7px;
+
+                        tr {
+
+                            border-bottom: 1px solid $main_Border_2;
+
+                            th,td {
+                                height: 50px;
+                                vertical-align: middle;
+                                text-align: center;
+                                font-size: 13px;
+                                letter-spacing: 1px;
+                                font-weight: bold;
+                                color: $main_Color;
+                                position: relative;
+                                border-bottom: solid 2px $specailBorder;
+
+                                &:last-child {
+
+                                    &::before {
+                                        display: none;
+                                    }
+                                }
+
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 1px;
+                                    height: 42%;
+                                    transform: translateY(-50%);
+                                    top: 50%;
+                                    right: 0px;
+                                    background:$main_Border_2;
+                                }
+                            }
+
+                            td {
+                                border-bottom: none;
+
+                                &.wNo {
+                                    width: 13%;
+                                }
+                                &.wStatus {
+                                    width: 14%;
+                                }
+
+                                &.wVal {
+                                    width: 13%;
+                                    color:$main_Color4;
+                                }
+                                &.wLimit {
+                                    width: 13%;
+                                }
+                                &.wShift {
+                                    width: 13%;
+                                    color: $bAseactive;
+                                }
+                                &.wDate {
+                                    width: 14.5%;
+                                }
+                                &.wDrawback {
+                                    width: 9.5%;
+                                }
+                                &.wBethistory {
+                                    width: 6%;
+                                }
+                                &.wPs {
+                                    width: 5%;
+                                }
+
+                                &::before {
+                                    display: none;
+                                }
+
+                                .d-btn {
+                                    width: 50px;
+                                    height: 30px;
+                                    border-radius: 3px;
+                                    cursor: no-drop;
+                                    @include disable;
+                                }
+                                .b-btn {
+                                    width: 50px;
+                                    height: 30px;
+                                    border-radius: 3px;
+                                    @include bet_btn;
+                                }
+
+                                .expand-btn {
+                                    background: none;
+                                    font-size: 22px;
+                                    font-weight: bolder;
+                                    height: 30px;
+                                    line-height: 40px;
+                                    color: $main_Color3;
+                                }
+                            }
+                        }
+                    }
+
+                    .noData {
+                        display: none;
+                        width: 100%;
+                        height: 533px;
+                        justify-content: center;
+                        align-items: center;
+                        letter-spacing: 1px;
+                        color: $main_Color6;
+                        font-weight: bold;
+
+                        &.display {
+                            display: flex;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        //withdrawal
+        .withdrawalWrap {
+            display: flex;
+
+            .withdrawalMiddle {
+                width: 880px;
+                margin-right: 15px;
+
+                .top {
+                    background:$mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: auto;
+                    margin-bottom: 20px;
+
+                    .title {
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 22px;
+                        box-sizing: border-box;
+    
+                        div {
+                            font-weight: bold;
+                            font-size: 20px;
+                            letter-spacing: 2px;
+                            color: $main_Color;
+                        }
+                    }
+    
+                    .walletBox {
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        width: 100%;
+                        height: 130px;
+    
+                        .smallBox {
+                            width: 33%;
+                            height: 100%;
+                            padding: 18px 25px 0;
+                            box-sizing: border-box;
+    
+                            .smallTitle {
+    
+                                p {
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 17px;
+                                    letter-spacing: 2px;
+                                    color: $remindColor_Main;
+                                    font-weight: bold;
+    
+                                    &.limit {
+                                        color: $level_middle;
+                                    }
+                                    &.canUse {
+                                        color: $bAseactive;
+                                    }
+    
+                                    i {
+                                        display: block;
+                                        width: 16px;
+                                        height: 16px;
+                                        margin-left: 6px;
+                                    }
+                                }
+                            }
+    
+                            .amount {
+                                padding: 21px 0 0 10px;
+                                font-size: 33px;
+                                font-weight: bold;
+                                color: $main_Color;
+                            }
+                        }
+                    }
+    
+                    .platformBox {
+                        width: 100%;
+                        height: auto;
+                        box-sizing: border-box;
+                        padding: 21px 23px 0;
+                        
+                        .platformTitle {
+                            font-size: 17px;
+                            font-weight: bold;
+                            letter-spacing: 2px;
+                            margin-bottom: 20px;
+                            color: $main_Color;
+                        }
+    
+                        ul {
+                            width: 100%;
+                            height: 97px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            overflow: hidden;
+    
+                            &.active {
+                                height: auto;
+                            }
+    
+                            li {
+                               width: 196px;
+                               height: 97px;
+                               box-sizing: border-box;
+                               padding: 18px;
+                               margin: 0 16px 16px 0;
+                               border: solid 1px $main_Border_2;
+                               border-radius: 5px;
+    
+                               &:nth-of-type(4n) {
+                                   margin-right: 0;
+                               }
+    
+                               .name {
+                                   margin-bottom: 5px;
+                                   font-size: 16px;
+                                   color: $main_Color;
+                                }
+    
+                                .amount {
+                                    font-size: 25px;
+                                    font-weight: bold;
+                                    color: $main_Color;
+                                    margin-top: 8px;
+                                }
+                            }
+                        }
+    
+                        .open {
+                            width: 100%;
+                            height: auto;
+                            padding: 23px 0 35px;
+                            text-align: center;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+    
+                            button {
+                                color: $main_Color;
+                                background: none;
+                                display: flex;
+                                align-items: center;
+                                font-size: 13px;
+    
+                                i {
+                                    display: block;
+                                    width: 14px;
+                                    height: 14px;
+                                    margin-left: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .bottom {
+                    background: $mainBG_2;
+                    box-shadow: 0 5px 10px -5px $boxShadow_3;
+                    border-radius: 5px;
+                    width: 100%;
+                    min-height: 630px;
+                    box-sizing: border-box;
+                    padding: 20px 0 20px 24px;
+
+                    .title {
+                        font-size: 17px;
+                        letter-spacing: 2px;
+                        color: $main_Color;
+                        margin-bottom: 20px;
+                        font-weight: bold;
+                    }
+
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        display: flex;
+                        margin-bottom: 40px;
+
+                        li {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-evenly;
+                            width: 222px;
+                            height: 112px;
+                            margin-right: 8px;
+                            border: solid 1px $main_Border_2;
+                            border-radius: 5px;
+
+                            .name {
+                                font-size: 17px;
+                                color: $main_Color;
+                                font-weight: bold;
+                            }
+
+                            .num {
+
+                                span {
+                                    font-size: 38px;
+                                    color: $main_Color;
+                                    font-weight: bold;
+                                }
+                            }
+
+                            .notice {
+                                font-size: 15px;
+                                letter-spacing: 2px;
+                                color: $remindColor_Second;
+                            }
+                        }
+                    }
+
+                    form {
+
+                        .row {
+                            display: flex;
+                            margin-bottom: 23px;
+
+                            p {
+                                font-size: 14px;
+                                letter-spacing: 1px;
+                                color: $main_Color;
+                                font-weight: bold;
+                                margin-top: 13px;
+                                
+                                i {
+                                    font-size: 12px;
+                                    color: $remindColor_Main;
+                                }
+                            }
+
+                            div {
+
+                                select {
+                                    width: 257px;
+                                    height: 40px;
+                                    margin-left: 26px;
+                                    @include select_Style;
+                                }
+
+                                input {
+                                    width: 257px;
+                                    height: 40px;
+                                    margin-left: 26px;
+                                    @include inputStyle;
+                                }
+
+                                .remind {
+                                    margin: 8px 0 0 26px;
+                                    font-size: 12px;
+                                    letter-spacing: 1px;
+                                    color: $remindColor_Main;
+                                }
+                            }
+                        }
+
+                        button {
+                            width: 257px;
+                            height: 40px;
+                            margin-left: 100px;
+                            @include mainBtn;
+                        }
+                    }
+
+                    .remindBox {
+                        width: 839px;
+                        box-sizing: border-box;
+                        padding: 15px 19px;
+                        margin: 24px 0 0 -10px;
+                        border: solid 1px $remineBoder;
+
+                        .remindTitle {
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                            color: $inner_Color;
+                            font-weight: bold;
+                        }
+
+                        div {
+                            margin-bottom: 11px;
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                            color: $main_Color6;
+                            font-weight: bold;
+                        }
+
+                        p {
+                            display: inline;
+                            color: $remindColor_Main;
+                            font-size: 13px;
+                            letter-spacing: 1px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

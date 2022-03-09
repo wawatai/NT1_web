@@ -1,0 +1,116 @@
+main {
+    //跑馬燈
+    .marqueeArea {
+        width: 1400px;
+        margin: auto;
+        height: 35px;
+        background: $marqueeArea_BG;
+        box-shadow: 0 0 13px 3px $marqueeArea_Shadow;
+        color: $marqueeArea_Color;
+        border-radius: 35px;
+        margin-bottom: 20px;
+
+        .center {
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+
+            .marqueeWrap {
+                width: 98%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                margin: auto;
+
+                .marquee_ic {
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 8px;
+                }
+
+                .marquee {
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+
+                    pre {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        animation: marquee 30s linear infinite;
+                        padding-left: 50%;
+
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+
+                    @keyframes marquee {
+                        0% {
+                            transform: translate(0%);
+                        }
+
+                        100% {
+                            transform: translate(-100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .ad {
+        width: 100%;
+        min-width: 1400px;
+        height: auto;
+    
+        .single-item {
+            margin: 0;
+    
+            .slick-slide {
+                outline: none;
+            }
+    
+            button {
+                z-index: 1;
+                width: 60px;
+                height: 110px;
+    
+                // &::before {
+                //     content: "";
+                //     background: $main_Color7;
+                //     position: absolute;
+                //     width: 100%;
+                //     height: 100%;
+                //     left: 0px;
+                //     top: 0px;
+                //     opacity: 1;
+                // }
+    
+                // &::after {
+                //     content: "";
+                //     position: absolute;
+                //     top: 50%;
+                //     left: 50%;
+                //     transform: translate(-50%,-50%);
+                //     width: 16px;
+                //     height: 27px;
+                // }
+    
+                &.slick-prev {
+                    left: 95px;
+                }
+    
+                &.slick-next {
+                    right: 95px;
+                    
+                    &::after {
+                        transform: translate(-50%,-50%) scaleX(-1);
+                    }
+                }
+            }
+        }
+    }
+}

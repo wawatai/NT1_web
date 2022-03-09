@@ -1,0 +1,360 @@
+.registerWrap {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bigBox {
+        width: auto;
+        height: 511px;
+        display: block;
+        border-radius: 17px;
+        overflow: hidden;
+        box-shadow: 0 5px 10px -5px $boxShadow_3;
+        background: $main_Color2;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 864px;
+            height: 93px;
+            border-radius: 0;
+
+            .title {
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                font-size: 35px;
+                letter-spacing: 2px;
+                color: $main_Color2;
+                font-weight: bold;
+
+                .logo {
+                    width: 88px;
+                    height: 41px;
+                    display: inline-block;
+                }
+
+                .photo {
+                    display: block;
+                    width: 44px;
+                    height: 44px;
+                    margin: 0 15px;
+                    transform: translateY(2px);
+                }
+            }
+        }
+
+        .bottom {
+            width: auto;
+            height: auto;
+            background: $main_Color2;
+            display: inline-block;
+            position: relative;
+            width: 864px;
+            padding: 28px 80px 30px;
+
+            .left {
+                width: 50%;
+                height: 390px;
+                float: left;
+
+                input {
+                    width: 332px;
+                    height: 41px;
+                    padding: 0 0 0 19px;
+                    @include inputStyle;
+                    margin-bottom: 20px;
+                }
+                .linebar {
+                    padding: 0 0 0 65px;
+                }
+                
+                ul {
+                    position: absolute;
+                    width: 58px;
+                    height: 41px;
+                    left: 80px;
+                    top: 211px;
+                    z-index: 2;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 2px;
+                        height: 5px;
+                        background: $main_Color3;
+                        transform: rotate(45deg) translateY(-50%);
+                        top: 50%;
+                        right: 10px;
+                        z-index: 2;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 2px;
+                        height: 5px;
+                        background: $main_Color3;
+                        transform: rotate(-45deg) translateY(-50%);
+                        top: 50%;
+                        right: 10px;
+                        z-index: 2;
+                    }
+
+                    li {
+                        width: 100%;
+                        height: 100%;
+                        box-sizing: border-box;
+                        @include register_lineBtn;
+                        display: none;
+                        cursor: pointer;
+
+                        &.display {
+                            display: block;
+                        }
+
+                        &.wechat {
+
+                            span {
+                                background-position-y: 100%;
+                            }
+                        }
+
+                        span {
+                            display: block;
+                            position: absolute;
+                            top: 50%;
+                            left: 8px;
+                            transform: translateY(-50%);
+                            width: 27px;
+                            height: 27px;
+                        }
+                    }
+                }
+
+                .err {
+                    font-size: 12px;
+                    line-height: 1.8;
+                    text-align: left;
+                    color: $remindColor_Main;
+                    position: absolute;
+                    margin-top: -20px;
+                }
+
+                    .eye {
+                    display: block;
+                    width: 23px;
+                    height: 17px;
+                    position: absolute;
+                    cursor: pointer;
+                    top: 100px;
+                    margin-left: 290px
+                }
+
+                .intoBtn {
+                    width: 332px;
+                    height: 41px;
+                    border-radius: 3px;
+                    @include mainBtn;
+                    margin-top: 80px;
+                    font-size: 16px;
+                }
+            }
+
+            .right {
+                width: 50%;
+                height: 390px;
+                float: right;
+                text-align: right;
+
+                input {
+                    width: 332px;
+                    height: 41px;
+                    padding: 0 0 0 19px;
+                    @include inputStyle;
+                    margin-bottom: 20px;
+                }
+
+                .verification-btn {
+                    position: absolute;
+                    width: 86px;
+                    height: 29px;
+                    right: 11px;
+                    @include smallBtn;
+                    border-radius: 2px;
+                    margin: 6px 78px 0px 0px;
+                }
+
+                .tips {
+                    font-size: 14px;
+                    padding-right: 42px;
+                    color: $remindColor_Main;
+                }
+                .checkBox {
+                    width: 332px;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 12px 0 15px;
+    
+                    input {
+                        width: 16px;
+                        height: 16px;
+                        margin-right: 10px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-top: -15px;
+                        color: $main_Color;
+    
+                        span {
+                            color: $readcolor;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .checkBtn {
+                    width: 332px;
+                    height: 41px;
+                    @include mainBtn;
+                    font-size: 16px;
+                }
+
+                .disable {
+                    width: 332px;
+                    height: 41px;
+                    @include disable;
+                    font-size: 16px;
+                    border: none;
+                    cursor: no-drop;
+                }
+            }
+        }
+
+        // .left {
+        //     width: 432px;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        // }
+
+        // .right {
+        //     display: flex;
+        //     flex-direction: column;
+        //     align-items: center;
+        //     width: 432px;
+        //     padding: 32px 0 37px;
+        //     background: $mainBG_2;
+
+        //     .title {
+        //         display: flex;
+        //         align-items: center;
+        //         margin-bottom: 25px;
+        //         justify-content: center;
+        //         width: 100%;
+        //         height: auto;
+        //         font-size: 25px;
+        //         font-weight: bold;
+        //         letter-spacing: 2px;
+
+        //         .person_ic {
+        //             width: 44px;
+        //             height: 44px;
+        //             margin-right: 15px;
+        //         }
+        //     }
+
+        //     label {
+        //         position: relative;
+        //         margin-bottom: 19px;
+        //         display: flex;
+        //         justify-content: center;
+
+        //         input {
+        //             width: 332px;
+        //             height: 41px;
+        //             @include inputStyle;
+        //         }
+
+        //         .err {
+        //             position: absolute;
+        //             bottom: -15px;
+        //             left: 0;
+        //             font-size: 12px;
+        //             font-weight: bold;
+        //             color: $headerTop_Remind;
+        //         }
+
+        //         .eye {
+        //             display: block;
+        //             width: 23px;
+        //             height: 17px;
+        //             position: absolute;
+        //             top: 50%;
+        //             transform: translateY(-50%);
+        //             right: 20px;
+        //             cursor: pointer;
+        //         }
+
+        //         button {
+        //             position: absolute;
+        //             top: 50%;
+        //             transform: translateY(-50%);
+        //             width: 86px;
+        //             height: 29px;
+        //             right: 11px;
+        //             @include smallBtn;
+        //         }
+        //     }
+
+        //     .tips {
+        //         width: 332px;
+        //         font-size: 12px;
+        //         font-weight: bold;
+        //         color: $remindColor_Main;
+        //         text-align: left;
+        //     }
+
+        //     .checkBox {
+        //         width: 332px;
+        //         height: auto;
+        //         display: flex;
+        //         align-items: center;
+        //         justify-content: center;
+        //         margin: 23px 0 32px;
+
+        //         input {
+        //             width: 16px;
+        //             height: 16px;
+        //             margin-right: 10px;
+        //         }
+
+        //         p {
+        //             font-size: 16px;
+        //             font-weight: bold;
+        //             color: $main_Color;
+
+        //             span {
+        //                 color: $main_Color6;
+        //             }
+        //         }
+        //     }
+
+        //     .checkBtn {
+        //         width: 332px;
+        //         height: 41px;
+        //         @include mainBtn;
+        //     }
+        // }
+    }
+}

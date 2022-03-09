@@ -1,0 +1,198 @@
+.eventWrap {
+    background: $mainBG_3;
+
+    .eventTitle {
+        width: 100%;
+        height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        p {
+            font-size: 61px;
+            color:$main_Color2;
+            font-weight: bold;
+        }
+    }
+    
+    .eventBody {
+        width: 1400px;
+        height: auto;
+        min-height: 350px;
+        padding: 28px 0 56px;
+        margin: 0 auto;
+        display: flex;
+
+        .side {
+            width: 357px;
+            margin-right: 13px;
+            height: auto;
+            background: $mainBG_2;
+            box-shadow: 0 5px 10px -5px $boxShadow_3;
+
+            ul {
+                width: 100%;
+                height: auto;
+
+                li {
+                    width: 100%;
+                    height: 60px;
+                    border-bottom: solid 1px $main_Border_2;
+                    @include optionStyle_1;
+                    padding: 0;
+
+                    i {
+                        display: block;
+                        width: 23px;
+                        height: 23px;
+                        margin: 0 28px;
+                    }
+
+                    span {
+                        font-weight: bold;
+                        font-size: 22px;
+                        color: $main_Color;
+                    }
+                }
+            }
+        }
+
+        .eventList {
+            display: none;
+            width: 1028px;
+
+            &.display {
+                display: block;
+            }
+
+            .eventBox {
+                background: $mainBG_2;
+                box-shadow: 0 5px 10px -5px $boxShadow_3;
+                display: flex;
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                ul {
+                    width: 252px;
+                    min-height: 185px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 30px 27px;
+
+                    .title {
+                        font-size: 29px;
+                        font-weight: bold;
+                        letter-spacing: 3px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+
+                    .btnBox {
+                        width: 100%;
+                        height: auto;
+
+                        button {
+                            width: 117px;
+                            height: 37px;
+                            @include mainBtn;
+                        }
+                        .disable {
+                            width: 117px;
+                            height: 37px;
+                            border-radius: 3px;
+                            font-size: 14px;
+                            font-weight: bold;
+                            padding: 0 16px;
+                            text-align: center;
+                            line-height: 37px;
+                            cursor: no-drop;
+                            @include disable;
+                        }
+                    }
+                }
+            }
+        }
+
+        .eventDetail {
+            display: none;
+            width: 1028px;
+            background: $mainBG_2;
+            box-shadow: 0px 5px 10px -5px $boxShadow_3;
+
+            &.display {
+                display: block;
+            }
+
+            .title {
+                padding: 22px 40px 18px;
+
+                p {
+                    font-size: 34px;
+                    font-weight: bold;
+                    color: $main_Color;
+                }
+
+                button {
+                    width: 135px;
+                    height: 36px;
+                    margin-top: 18px;
+                    @include mainBtn;
+
+                    i {
+                        display: inline-block;
+                        width: 17px;
+                        height: 17px;
+                        margin: 0 10px -2px 0;
+                    }
+                }
+            }
+
+            .date {
+                margin: 0 40px;
+                padding: 28px 0 30px;
+                display: flex;
+                flex-direction: column;
+                border-bottom: solid 1px $main_Border_2;
+
+                span {
+                    color:  $main_Color;
+                    font-size: 20px;
+
+                    &.dateTitle {
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-bottom: 28px;
+                        color: $main_Color4;
+                    }
+                }
+            }
+
+            .info {
+                padding: 25px 40px;
+                
+                p {
+                    font-size: 16px;
+                    color: $main_Color;
+
+                    &.infoTitle {
+                        font-size: 26px;
+                        font-weight: bold;
+                        margin-bottom: 30px;
+                        color: $main_Color4;
+                    }
+                }
+            }
+
+            .detailFooter {
+                width: 100%;
+                height: 130px;
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
