@@ -23,3 +23,16 @@ $(function(){
         }
     })
 })
+$(function(){
+    $('.jumpWindow .close_ic,.jumpWindow .close_ic_gray').click(function(){
+        $('.filter').removeClass('display');
+    })
+    $('.jumpWindow .btnBox').click(function(){
+        $('.filter').removeClass('display');
+    })
+
+    $('.registerWrap .right .verification-btn').click(function(){
+        $('.jumpWindow').removeClass('display');
+        $('.filter,.needphone').addClass('display');
+    })
+})

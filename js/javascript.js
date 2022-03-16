@@ -225,6 +225,11 @@ $(function(){
         $('.filter,.forgetPassword').addClass('display');
     })
 
+    $('.registerWrap .right .verification-btn').click(function(){
+        $('.jumpWindow').removeClass('display');
+        $('.filter,.needphone').addClass('display');
+    })
+
     $('.loginBtn,.openNews').click(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.news').addClass('display');
@@ -239,6 +244,10 @@ $(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter, .ReviseWindow').addClass('display');
     })
+
+    // $('.ReviseWindow .button').click(function(){
+    //     $('.filter, .needphone').addClass('display');
+    // })
 
     $('.dealBox .fakeTable td a').click(function(){
         $('.jumpWindow').removeClass('display');
