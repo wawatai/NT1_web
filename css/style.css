@@ -233,7 +233,7 @@ header .logout_ic {
   background-size: 100%;
 }
 
-.slotBody .pfName .back {
+.slotBody .pfName:before {
   background: url("../images/icon/svg/arrow_r.svg") no-repeat;
   background-size: 100%;
 }
@@ -885,16 +885,16 @@ html body header .top .user li:not(.platform) .loginForm div i {
           transform: translateY(-50%);
 }
 html body header .top .user li:not(.platform) .loginForm div i.acc_ic {
-  left: 19px;
+  left: 10px;
 }
 html body header .top .user li:not(.platform) .loginForm div i.pass_ic {
   width: 12px;
-  left: 21px;
+  left: 12px;
 }
 html body header .top .user li:not(.platform) .loginForm div input {
   width: 152px;
   height: 30px;
-  margin: 0 10px;
+  margin: 0 7px 0 0px;
   border: solid 1px #e6e6e6;
   background: #ffffff;
   color: #333333;
@@ -1233,7 +1233,7 @@ html body header .topGameList .listWrap .center .container ul li p {
   font-size: 14px;
   padding-top: 8px;
   text-align: center;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
   font-size: 16px;
 }
@@ -1621,7 +1621,7 @@ html body .filter .jumpWindow.news .title i {
 }
 html body .filter .jumpWindow.news .nav {
   margin: 30px 15px 8px;
-  border-bottom: solid 1px #b3b3b3;
+  border-bottom: solid 1px #e6e6e6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1655,7 +1655,7 @@ html body .filter .jumpWindow.news .nav li::before {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   right: -1px;
-  background: #4a59ed;
+  background: #e6e6e6;
 }
 html body .filter .jumpWindow.news .content {
   display: none;
@@ -1674,7 +1674,7 @@ html body .filter .jumpWindow.news .content li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: solid 1px #b3b3b3;
+  border-bottom: solid 1px #e6e6e6;
 }
 html body .filter .jumpWindow.news .content li div {
   width: 100%;
@@ -1761,7 +1761,7 @@ html body .filter .jumpWindow.score .total {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px 0;
-  border-bottom: solid 1px #b3b3b3;
+  border-bottom: solid 1px #e6e6e6;
   font-size: 16px;
   color: #333333;
 }
@@ -1787,7 +1787,7 @@ html body .filter .jumpWindow.score ul li {
           justify-content: flex-start;
   width: 100%;
   height: 48px;
-  border-bottom: solid 1px #b3b3b3;
+  border-bottom: solid 1px #e6e6e6;
 }
 html body .filter .jumpWindow.score ul li:last-child .point .notice {
   top: -40px;
@@ -1804,7 +1804,7 @@ html body .filter .jumpWindow.score ul li div {
 }
 html body .filter .jumpWindow.score ul li div.name {
   width: 152px;
-  border-right: solid 1px #b3b3b3;
+  border-right: solid 1px #e6e6e6;
   padding-left: 30px;
 }
 html body .filter .jumpWindow.score ul li div.point {
@@ -1856,7 +1856,7 @@ html body .filter .jumpWindow.score ul li div.point .notice p i {
   height: 0px;
   border-style: solid;
   border-width: 0px 6px 8px;
-  border-color: #b3b3b3 transparent;
+  border-color: #e6e6e6 transparent;
 }
 html body .filter .jumpWindow.passwordWindow {
   display: none;
@@ -2253,7 +2253,7 @@ html body .filter .jumpWindow.betWindow .enterGame {
   height: auto;
   text-align: center;
   padding: 20px 0;
-  border-top: solid 1px #b3b3b3;
+  border-top: solid 1px #e6e6e6;
 }
 html body .filter .jumpWindow.betWindow .enterGame button {
   width: 351px;
@@ -2431,7 +2431,7 @@ html body .gameWrap .content .textBox .mainCnt {
   line-height: 24px;
   font-size: 14px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .gameWrap .content .btnBox {
   width: auto;
@@ -2459,7 +2459,7 @@ html body .gameWrap .content .btnBox .innBox ul li p {
   width: 100%;
   text-align: center;
   font-size: 14px;
-  color: #333333;
+  color: #666666;
   padding-top: 10px;
 }
 html body .gameWrap .content.livePage .btnBox .innBox ul li {
@@ -2472,7 +2472,7 @@ html body .gameWrap .slotCenter {
   padding: 25px 0;
 }
 html body .gameWrap .slotCenter .slotBody {
-  background: #f8f8fa;
+  background: #ffffff;
   border-radius: 5px;
   -webkit-box-shadow: 0 5px 10px #00000033;
           box-shadow: 0 5px 10px #00000033;
@@ -2591,9 +2591,9 @@ html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfNa
           align-items: center;
 }
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName.active {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName.active .back {
   display: block;
@@ -2603,9 +2603,31 @@ html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfNa
 }
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back {
   display: none;
-  width: 18px;
-  height: 32px;
-  margin-right: 20px;
+  width: 137px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f1c999), color-stop(50%, #cca172), to(#f1d7b7));
+  background: linear-gradient(to bottom, #f1c999 1%, #cca172 50%, #f1d7b7 100%);
+  border: solid 1px #f9e3c8;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  padding-left: 20px;
+}
+html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back:hover, html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back:active, html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f1c999), to(#cca172));
+  background: linear-gradient(to top, #f1c999 0%, #cca172 100%);
+  color: #ffffff;
+}
+html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back i {
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  position: relative;
+  right: 75px;
+  top: 4px;
 }
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .all {
   background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
@@ -2780,7 +2802,7 @@ html body .gameWrap .downBar li {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   border-right: solid 1px #4c4c4c;
   cursor: pointer;
 }
@@ -2877,7 +2899,7 @@ html body .eventWrap .eventBody .side ul li i {
 html body .eventWrap .eventBody .side ul li span {
   font-weight: bold;
   font-size: 22px;
-  color: #333333;
+  color: #666666;
 }
 html body .eventWrap .eventBody .eventList {
   display: none;
@@ -2974,7 +2996,7 @@ html body .eventWrap .eventBody .eventDetail .title {
 html body .eventWrap .eventBody .eventDetail .title p {
   font-size: 34px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .eventWrap .eventBody .eventDetail .title button {
   width: 135px;
@@ -3012,7 +3034,7 @@ html body .eventWrap .eventBody .eventDetail .date {
   border-bottom: solid 1px #e6e6e6;
 }
 html body .eventWrap .eventBody .eventDetail .date span {
-  color: #333333;
+  color: #666666;
   font-size: 20px;
 }
 html body .eventWrap .eventBody .eventDetail .date span.dateTitle {
@@ -3026,7 +3048,7 @@ html body .eventWrap .eventBody .eventDetail .info {
 }
 html body .eventWrap .eventBody .eventDetail .info p {
   font-size: 16px;
-  color: #333333;
+  color: #666666;
 }
 html body .eventWrap .eventBody .eventDetail .info p.infoTitle {
   font-size: 26px;
@@ -3084,7 +3106,7 @@ html body .innerPage .center .innerSide .userInfo {
           justify-content: center;
 }
 html body .innerPage .center .innerSide .userInfo div .account {
-  color: #333333;
+  color: #666666;
   font-size: 14px;
   font-weight: bold;
   display: -webkit-box;
@@ -3279,7 +3301,7 @@ html body .innerPage .center .memberWrap .top h1 {
   padding: 0 20px;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   border-bottom: solid 1px #e6e6e6;
   font-weight: bold;
 }
@@ -3291,7 +3313,7 @@ html body .innerPage .center .memberWrap .top .content {
 html body .innerPage .center .memberWrap .top .content p {
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .memberWrap .top .content p.remind {
@@ -3316,7 +3338,7 @@ html body .innerPage .center .memberWrap .top .content .level {
 html body .innerPage .center .memberWrap .top .content .level li {
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3385,7 +3407,7 @@ html body .innerPage .center .memberWrap .bottom .dataWrap .content {
 html body .innerPage .center .memberWrap .bottom .dataWrap .content h1 {
   font-size: 17px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable {
@@ -3470,7 +3492,7 @@ html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable l
 }
 html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable li.right ul li p {
   font-size: 14px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable li label {
@@ -3481,7 +3503,7 @@ html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable l
   margin-right: 26px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .memberWrap .bottom .dataWrap .content .fakeTable li input {
@@ -3503,7 +3525,7 @@ html body .innerPage .center .memberWrap .bottom .dataWrap .changePassword h1 {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .memberWrap .bottom .dataWrap .changePassword ul {
   margin: 25px 0;
@@ -3516,7 +3538,7 @@ html body .innerPage .center .memberWrap .bottom .dataWrap .changePassword ul li
   margin-right: 26px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .memberWrap .bottom .dataWrap .changePassword ul li input {
@@ -3561,7 +3583,7 @@ html body .innerPage .center .memberWrap .bottom .platformWrap h1 {
   padding: 20px 24px;
   font-size: 17px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .memberWrap .bottom .platformWrap table {
@@ -3579,7 +3601,7 @@ html body .innerPage .center .memberWrap .bottom .platformWrap table tr th, html
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   position: relative;
   border-bottom: solid 2px #3d4cce;
 }
@@ -3683,7 +3705,7 @@ html body .innerPage .center .vipWrap .vipHeader .medal div p {
   font-weight: bold;
   font-size: 22px;
   text-align: center;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .vipWrap .vipHeader .rightBox {
   width: 100%;
@@ -3706,7 +3728,7 @@ html body .innerPage .center .vipWrap .vipHeader .rightBox .lv {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .vipWrap .vipHeader .rightBox .money span {
   font-size: 14px;
@@ -4022,7 +4044,7 @@ html body .innerPage .center .vipWrap .detailCardBox .wrap ul li .cardBg .medal 
   text-align: center;
   font-size: 16px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .vipWrap .detailCardBox .wrap ul li .cardBg .content {
   width: 100%;
@@ -4056,7 +4078,7 @@ html body .innerPage .center .vipWrap .detailCardBox .wrap ul li .cardBg .conten
 html body .innerPage .center .vipWrap .detailTitle_2 {
   font-size: 17px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   margin: 15px 0 10px 22px;
 }
 html body .innerPage .center .vipWrap .detailTitle_2.first {
@@ -4091,7 +4113,7 @@ html body .innerPage .center .vipWrap .fakeTable li div {
   text-align: center;
   font-size: 13px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   border-right: solid 1px #4c4c4c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4138,7 +4160,7 @@ html body .innerPage .center .walletWrap .walletMiddle .top .title {
   padding-left: 22px;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .top .content {
@@ -4171,7 +4193,7 @@ html body .innerPage .center .walletWrap .walletMiddle .top .content .total .tot
   margin-bottom: 11px;
   font-size: 17px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .top .content .total .totalTitle .icon {
@@ -4206,7 +4228,7 @@ html body .innerPage .center .walletWrap .walletMiddle .top .content .total .tot
   width: 100%;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #ffffff;
 }
 html body .innerPage .center .walletWrap .walletMiddle .top .content .total .totalTitle .icon .jumpRemind p i {
   position: absolute;
@@ -4244,7 +4266,7 @@ html body .innerPage .center .walletWrap .walletMiddle .top .content .total .amo
           box-sizing: border-box;
   padding-left: 11px;
   font-size: 43px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .top .content .able {
@@ -4267,7 +4289,7 @@ html body .innerPage .center .walletWrap .walletMiddle .top .content .able .able
   margin-bottom: 11px;
   font-size: 17px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .top .content .able .ableTitle .icon {
@@ -4323,7 +4345,7 @@ html body .innerPage .center .walletWrap .walletMiddle .top .content .able .amou
   padding-left: 11px;
   margin-bottom: 27px;
   font-size: 43px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .top .content .able .lock {
@@ -4331,12 +4353,12 @@ html body .innerPage .center .walletWrap .walletMiddle .top .content .able .lock
   display: -ms-flexbox;
   display: flex;
   font-size: 16px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .top .content .able .lock p {
   margin-right: 23px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .walletWrap .walletMiddle .bottom {
   width: 100%;
@@ -4401,7 +4423,7 @@ html body .innerPage .center .walletWrap .walletMiddle .bottom .platformWallet .
   font-size: 17px;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .bottom .platformWallet ul {
@@ -4431,12 +4453,12 @@ html body .innerPage .center .walletWrap .walletMiddle .bottom .platformWallet u
 html body .innerPage .center .walletWrap .walletMiddle .bottom .platformWallet ul li div {
   font-size: 16px;
   margin-bottom: 8px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .walletWrap .walletMiddle .bottom .platformWallet ul li p {
   font-size: 25px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .cardWrap {
@@ -4468,7 +4490,7 @@ html body .innerPage .center .cardWrap .cardMiddle .top .header span {
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .cardWrap .cardMiddle .top .content {
   width: 100%;
@@ -4491,7 +4513,7 @@ html body .innerPage .center .cardWrap .cardMiddle .top .content .title span {
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .cardWrap .cardMiddle .top .content .title span:nth-of-type(2) {
   font-size: 15px;
@@ -4588,7 +4610,7 @@ html body .innerPage .center .cardWrap .cardMiddle .top .content .cardBox .slide
   text-align: center;
   letter-spacing: 1px;
   background: #ffffff;
-  color: #333333;
+  color: #666666;
   font-size: 16px;
   border-radius: 5px;
   margin-top: 4px;
@@ -4614,7 +4636,7 @@ html body .innerPage .center .cardWrap .cardMiddle .bottomWrap .bottom div .titl
   font-size: 17px;
   letter-spacing: 2px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .cardWrap .cardMiddle .bottomWrap .bottom div .formBox {
   margin-top: 25px;
@@ -4665,7 +4687,7 @@ html body .innerPage .center .cardWrap .cardMiddle .bottomWrap .bottom div .form
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   white-space: nowrap;
 }
 html body .innerPage .center .cardWrap .cardMiddle .bottomWrap .bottom div .formBox form .content .row .smallTitle span::before {
@@ -4781,7 +4803,7 @@ html body .innerPage .center .rightSide .smallBoard .title {
   border-bottom: solid 1px #e6e6e6;
   font-size: 16px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .rightSide .smallBoard .title .more {
@@ -4793,7 +4815,7 @@ html body .innerPage .center .rightSide .smallBoard .title .more {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   cursor: pointer;
 }
 html body .innerPage .center .rightSide .smallBoard .title .more .arrow {
@@ -4841,10 +4863,10 @@ html body .innerPage .center .rightSide .smallBoard .list.trans .transList .tran
   height: 19px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .rightSide .smallBoard .list.trans .transList .transTitle p {
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .rightSide .smallBoard .list.trans .transList .text {
   display: -webkit-box;
@@ -4856,7 +4878,7 @@ html body .innerPage .center .rightSide .smallBoard .list.trans .transList .text
   height: 19px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .rightSide .smallBoard .list.trans .transList .text .trans_arrow {
@@ -4909,7 +4931,7 @@ html body .innerPage .center .rightSide .smallBoard .list .smallList ul li p:las
   font-size: 14px;
   margin-top: 6px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .rightSide .smallBoard .list .noData {
   display: none;
@@ -4951,7 +4973,7 @@ html body .innerPage .center .mailWrap.innerMode .title button {
   background: none;
   font-size: 20px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4983,7 +5005,7 @@ html body .innerPage .center .mailWrap.innerMode .msgTitle span {
   display: inline-block;
   width: 800px;
   font-size: 18px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .mailWrap.innerMode .msgTitle button {
   width: 40px;
@@ -5003,7 +5025,7 @@ html body .innerPage .center .mailWrap.innerMode .msg {
   width: 100%;
   height: auto;
   padding: 22px 0;
-  color: #333333;
+  color: #666666;
   font-size: 15px;
   font-weight: bold;
 }
@@ -5029,7 +5051,7 @@ html body .innerPage .center .mailWrap .top p {
   padding-left: 22px;
   font-size: 20px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   border-bottom: solid 1px #e6e6e6;
 }
 html body .innerPage .center .mailWrap .top div {
@@ -5208,7 +5230,7 @@ html body .innerPage .center .mailWrap .bottom .list .btnBox .all {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #333333;
+  color: #666666;
   font-size: 16px;
 }
 html body .innerPage .center .mailWrap .bottom .list .btnBox .all input {
@@ -5275,7 +5297,7 @@ html body .innerPage .center .mailWrap .bottom .list ul li .title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 33px 0 28px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .mailWrap .bottom .list ul li .title::before {
@@ -5329,7 +5351,7 @@ html body .innerPage .center .eventWrap .title h1 {
   letter-spacing: 2px;
   font-size: 20px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .eventWrap .eventMiddle .tabs {
   width: 100%;
@@ -5407,7 +5429,7 @@ html body .innerPage .center .eventWrap .eventMiddle .eventBox ul li .header div
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventBox ul li .header div p {
   margin-right: 18px;
-  color: #333333;
+  color: #666666;
   font-size: 16px;
   font-weight: bold;
   white-space: nowrap;
@@ -5477,7 +5499,7 @@ html body .innerPage .center .eventWrap .eventMiddle .eventBox ul li .content ul
 html body .innerPage .center .eventWrap .eventMiddle .eventBox ul li .content ul li p {
   font-size: 14px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventBox ul li .content ul li p.smallTitle {
   margin-right: 25px;
@@ -5535,7 +5557,7 @@ html body .innerPage .center .eventWrap .eventMiddle .eventBox2 ul li .header di
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventBox2 ul li .header div p {
   margin-right: 18px;
-  color: #333333;
+  color: #666666;
   font-size: 16px;
   font-weight: bold;
   white-space: nowrap;
@@ -5605,7 +5627,7 @@ html body .innerPage .center .eventWrap .eventMiddle .eventBox2 ul li .content u
 html body .innerPage .center .eventWrap .eventMiddle .eventBox2 ul li .content ul li p {
   font-size: 14px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventBox2 ul li .content ul li p.smallTitle {
   margin-right: 25px;
@@ -5683,7 +5705,7 @@ html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .s
   max-width: 48px;
   margin-right: 25px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
   text-align: right;
 }
@@ -5803,7 +5825,7 @@ html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .t
   height: 50px;
   vertical-align: middle;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   border-bottom: solid 2px #3d4cce;
   font-size: 13px;
   font-weight: bold;
@@ -5812,9 +5834,9 @@ html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .t
   height: 50px;
   vertical-align: middle;
   font-size: 13px;
-  color: #333333;
+  color: #666666;
   text-align: center;
-  border-bottom: solid 2px #dbdef4;
+  border-bottom: solid 1px #dbdef4;
 }
 html body .innerPage .center .eventWrap .eventMiddle .eventRecord .recordWrap .tableWrap .noData {
   display: none;
@@ -5844,7 +5866,7 @@ html body .innerPage .center .dealWrap .top {
   background: #ffffff;
   -webkit-box-shadow: 0 5px 10px -5px #00000033;
           box-shadow: 0 5px 10px -5px #00000033;
-  color: #333333;
+  color: #666666;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5954,7 +5976,7 @@ html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .search form
   font-size: 14px;
   margin-right: 25px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .search form .bigBox .innerBox .row .inputBox {
@@ -6094,7 +6116,7 @@ html body .innerPage .center .dealWrap .bottom .dealBox .reviewWrap .fakeTable t
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   position: relative;
   border-bottom: solid 2px #3d4cce;
 }
@@ -6154,7 +6176,7 @@ html body .innerPage .center .dealWrap .bottom .dealBox2 table tr th, html body 
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   position: relative;
   border-bottom: solid 2px #3d4cce;
 }
@@ -6203,9 +6225,6 @@ html body .innerPage .center .dealWrap .bottom .dealBox2 table tr td.wBethistory
 }
 html body .innerPage .center .dealWrap .bottom .dealBox2 table tr td.wPs {
   width: 5%;
-}
-html body .innerPage .center .dealWrap .bottom .dealBox2 table tr td::before {
-  display: none;
 }
 html body .innerPage .center .dealWrap .bottom .dealBox2 table tr td .d-btn {
   width: 50px;
@@ -6274,7 +6293,7 @@ html body .innerPage .center .betWrap form .title {
   margin-bottom: 28px;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .betWrap form .inputGroup {
@@ -6295,7 +6314,7 @@ html body .innerPage .center .betWrap form .inputGroup p {
   margin-right: 25px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .betWrap form .inputGroup select {
@@ -6350,7 +6369,7 @@ html body .innerPage .center .betWrap form .timeGroup .timeBox p {
   margin-right: 25px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .betWrap form .timeGroup .timeBox p.remind {
@@ -6467,7 +6486,7 @@ html body .innerPage .center .betWrap .fakeTable ul li .wordWrap {
 }
 html body .innerPage .center .betWrap .fakeTable ul li .wordWrap p {
   position: relative;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
   font-size: 14px;
   text-align: center;
@@ -6541,7 +6560,7 @@ html body .innerPage .center .betWrap .fakeTable ul li table tr th {
 html body .innerPage .center .betWrap .fakeTable ul li table tr td {
   font-weight: bold;
   font-size: 14px;
-  color: #333333;
+  color: #666666;
   text-align: center;
   height: 40px;
   vertical-align: middle;
@@ -6619,7 +6638,7 @@ html body .innerPage .center .depositWrap .depositMiddle .top .title {
   border-bottom: solid 1px #e6e6e6;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .depositWrap .depositMiddle .top .title button {
@@ -6735,7 +6754,7 @@ html body .innerPage .center .depositWrap .depositMiddle .bottom.display {
 html body .innerPage .center .depositWrap .depositMiddle .bottom .title {
   font-size: 17px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .depositWrap .depositMiddle .bottom .content {
@@ -6756,7 +6775,7 @@ html body .innerPage .center .depositWrap .depositMiddle .bottom .content form .
   margin-bottom: 22px;
   font-weight: bold;
   font-size: 15px;
-  color: #333333;
+  color: #666666;
   position: relative;
 }
 html body .innerPage .center .depositWrap .depositMiddle .bottom .content form .row i {
@@ -6847,18 +6866,18 @@ html body .innerPage .center .depositWrap .depositMiddle .confirm .content .conf
   height: auto;
 }
 html body .innerPage .center .depositWrap .depositMiddle .confirm .content .confin_box span {
-  color: #333333;
+  color: #666666;
   font-size: 15px;
   font-weight: bold;
 }
 html body .innerPage .center .depositWrap .depositMiddle .confirm .content .confin_box .confin_name {
-  color: #333333;
+  color: #666666;
   font-size: 16px;
   margin: 25px 0 0 92px;
   font-weight: bold;
 }
 html body .innerPage .center .depositWrap .depositMiddle .confirm .content .confin_box .confin_name2 {
-  color: #333333;
+  color: #666666;
   font-size: 16px;
   font-weight: bold;
   margin: -14px 0 0 138px;
@@ -6882,7 +6901,7 @@ html body .innerPage .center .depositWrap .depositMiddle .confirm .content .conf
   text-align: right;
 }
 html body .innerPage .center .depositWrap .depositMiddle .confirm .content .confin_box .confin_number .number_num {
-  color: #333333;
+  color: #666666;
   font-size: 15px;
   padding: 0 18px;
 }
@@ -6962,7 +6981,7 @@ html body .innerPage .center .inviteWrap .inviteMiddle .invite_bg .title {
   margin-bottom: 9px;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .inviteWrap .inviteMiddle .invite_bg .content {
@@ -7074,7 +7093,7 @@ html body .innerPage .center .transferWrap .transferMiddle .title {
           align-items: center;
 }
 html body .innerPage .center .transferWrap .transferMiddle .title div {
-  color: #333333;
+  color: #666666;
   font-size: 20px;
   letter-spacing: 2px;
   font-weight: bold;
@@ -7152,7 +7171,7 @@ html body .innerPage .center .transferWrap .transferMiddle .wallet .centerWallet
   padding: 13px 0 0 10px;
   font-size: 43px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .transferWrap .transferMiddle .wallet .line {
   width: 1px;
@@ -7194,7 +7213,7 @@ html body .innerPage .center .transferWrap .transferMiddle .platform .platformTi
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .transferWrap .transferMiddle .platform ul {
   width: 100%;
@@ -7225,12 +7244,12 @@ html body .innerPage .center .transferWrap .transferMiddle .platform ul li:nth-o
 html body .innerPage .center .transferWrap .transferMiddle .platform ul li .name {
   margin-bottom: 5px;
   font-size: 16px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .transferWrap .transferMiddle .platform ul li .amount {
   font-size: 25px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   margin-top: 8px;
 }
 html body .innerPage .center .transferWrap .transferMiddle .platform .open {
@@ -7249,7 +7268,7 @@ html body .innerPage .center .transferWrap .transferMiddle .platform .open {
           justify-content: center;
 }
 html body .innerPage .center .transferWrap .transferMiddle .platform .open button {
-  color: #333333;
+  color: #666666;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7282,7 +7301,7 @@ html body .innerPage .center .transferWrap .transferMiddle form .formTitle {
   margin-bottom: 25px;
   font-size: 17px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .transferWrap .transferMiddle form .formTitle .remind {
@@ -7309,7 +7328,7 @@ html body .innerPage .center .transferWrap .transferMiddle form .platformBox p {
   width: 56px;
   text-align: center;
   font-size: 14px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .transferWrap .transferMiddle form .platformBox .trans_ic {
@@ -7357,7 +7376,7 @@ html body .innerPage .center .transferWrap .transferMiddle form .platformBox2 p 
   width: 56px;
   text-align: center;
   font-size: 14px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .transferWrap .transferMiddle form .platformBox2 .trans_ic {
@@ -7409,7 +7428,7 @@ html body .innerPage .center .transferWrap .transferMiddle form .row p {
   width: 120px;
   font-size: 16px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .transferWrap .transferMiddle form .row input {
   width: 267px;
@@ -7497,7 +7516,7 @@ html body .innerPage .center .dividendWrap .top {
   background: #ffffff;
   -webkit-box-shadow: 0 5px 10px -5px #00000033;
           box-shadow: 0 5px 10px -5px #00000033;
-  color: #333333;
+  color: #666666;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7606,7 +7625,7 @@ html body .innerPage .center .dividendWrap .bottom .dealBox .reviewWrap .search 
   font-size: 14px;
   margin-right: 25px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .dividendWrap .bottom .dealBox .reviewWrap .search form .bigBox .innerBox .row .inputBox {
@@ -7746,7 +7765,7 @@ html body .innerPage .center .dividendWrap .bottom .dealBox .reviewWrap .fakeTab
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   position: relative;
   border-bottom: solid 2px #3d4cce;
 }
@@ -7806,7 +7825,7 @@ html body .innerPage .center .dividendWrap .bottom .dealBox2 table tr th, html b
   font-size: 13px;
   letter-spacing: 1px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   position: relative;
   border-bottom: solid 2px #3d4cce;
 }
@@ -7943,7 +7962,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .title div {
   font-weight: bold;
   font-size: 20px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .walletBox {
   display: -webkit-box;
@@ -7973,7 +7992,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .walletBox .
           align-items: center;
   font-size: 17px;
   letter-spacing: 2px;
-  color: #e11515;
+  color: #0df;
   font-weight: bold;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .walletBox .smallBox .smallTitle p.limit {
@@ -7992,7 +8011,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .walletBox .
   padding: 21px 0 0 10px;
   font-size: 33px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox {
   width: 100%;
@@ -8006,7 +8025,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 20px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox ul {
   width: 100%;
@@ -8037,12 +8056,12 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox ul li .name {
   margin-bottom: 5px;
   font-size: 16px;
-  color: #333333;
+  color: #666666;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox ul li .amount {
   font-size: 25px;
   font-weight: bold;
-  color: #333333;
+  color: #666666;
   margin-top: 8px;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox .open {
@@ -8061,7 +8080,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox
           justify-content: center;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .top .platformBox .open button {
-  color: #333333;
+  color: #666666;
   background: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8091,7 +8110,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom {
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom .title {
   font-size: 17px;
   letter-spacing: 2px;
-  color: #333333;
+  color: #666666;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -8125,12 +8144,12 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li {
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .name {
   font-size: 17px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .num span {
   font-size: 38px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
 }
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom ul li .notice {
@@ -8147,7 +8166,7 @@ html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row
 html body .innerPage .center .withdrawalWrap .withdrawalMiddle .bottom form .row p {
   font-size: 14px;
   letter-spacing: 1px;
-  color: #333333;
+  color: #666666;
   font-weight: bold;
   margin-top: 13px;
 }
@@ -8298,7 +8317,7 @@ html body .helpPage .center .nav li.title p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #333333;
+  color: #666666;
   font-size: 22px;
   font-weight: bold;
 }
@@ -8397,14 +8416,14 @@ html body .helpPage .center .helpWrap div h2:nth-of-type(1) {
   margin-top: 0;
 }
 html body .helpPage .center .helpWrap div h3 {
-  color: #333333;
+  color: #666666;
   font-size: 15px;
   font-weight: bold;
   margin-bottom: 13px;
 }
 html body .helpPage .center .helpWrap div p {
   margin-bottom: 23px;
-  color: #333333;
+  color: #666666;
   font-size: 16px;
   line-height: 18px;
 }
@@ -8764,7 +8783,7 @@ html body .registerWrap .bigBox .bottom .right .checkBox p {
   font-size: 16px;
   font-weight: bold;
   margin-top: -15px;
-  color: #333333;
+  color: #666666;
 }
 html body .registerWrap .bigBox .bottom .right .checkBox p span {
   color: #c69c6d;

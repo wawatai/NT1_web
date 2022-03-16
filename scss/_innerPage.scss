@@ -1094,7 +1094,7 @@
                                             width: 100%;
                                             font-size: 14px;
                                             letter-spacing: 1px;
-                                            color:$main_Color;
+                                            color:$main_Color2;
 
                                             i {
                                                 position: absolute;
@@ -2666,7 +2666,7 @@
                                         font-size: 13px;
                                         color: $main_Color;
                                         text-align: center;
-                                        border-bottom: solid 2px $table_Td_Border;
+                                        border-bottom: solid 1px $table_Td_Border;
                                     }
                                 }
                             }
@@ -3009,9 +3009,9 @@
                                     width: 5%;
                                 }
 
-                                &::before {
-                                    display: none;
-                                }
+                                // &::before {
+                                //     display: none;
+                                // }
 
                                 .d-btn {
                                     width: 50px;
@@ -4589,7 +4589,7 @@
                                     align-items: center;
                                     font-size: 17px;
                                     letter-spacing: 2px;
-                                    color: $remindColor_Main;
+                                    color: $level_high;
                                     font-weight: bold;
     
                                     &.limit {

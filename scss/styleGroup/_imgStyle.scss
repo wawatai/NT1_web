@@ -222,7 +222,7 @@ header .logout_ic {
     background-size: 100%;
 }
 //.slotBody .pfName .back
-.slotBody .pfName .back {
+.slotBody .pfName:before {
     background: url('../images/icon/svg/arrow_r.svg') no-repeat;
     background-size: 100%;
 }

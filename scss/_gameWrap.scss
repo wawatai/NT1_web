@@ -125,7 +125,7 @@
         padding: 25px 0;
 
         .slotBody {
-            background: $mainBG_3;
+            background: $mainBG_2;
             border-radius: 5px;
             box-shadow: 0 5px 10px $boxShadow_3;
 
@@ -225,7 +225,7 @@
                             align-items: center;
 
                             &.active {
-                                justify-content: flex-start;
+                                justify-content: space-between;
 
                                 .back {
                                     display: block;
@@ -238,9 +238,21 @@
 
                             .back {
                                 display: none;
-                                width: 18px;
-                                height: 32px;
-                                margin-right: 20px
+                                width: 137px;
+                                height: 40px;
+                                @include game_btn;
+                                font-size: 18px;
+                                padding-left: 20px;
+                                // margin-right: 20px;
+
+                                i {
+                                    display: inline-block;
+                                    width: 10px;
+                                    height: 20px;
+                                    position: relative;
+                                    right: 75px;
+                                    top: 4px
+                                }
                             }
 
                             .all {

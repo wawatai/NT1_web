@@ -78,11 +78,11 @@ header {
                             transform: translateY(-50%);
 
                             &.acc_ic {
-                                left: 19px;
+                                left: 10px;
                             }
                             &.pass_ic {
                                 width: 12px;
-                                left: 21px;
+                                left: 12px;
                             }
                             // &.forget {
                             //     right: 15px;
@@ -93,7 +93,7 @@ header {
                         input {
                             width: 152px;
                             height: 30px;
-                            margin: 0 10px;
+                            margin: 0 7px 0 0px;
                             @include headerTopInput;
                         }
                     }
