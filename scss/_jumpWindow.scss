@@ -188,6 +188,8 @@
 
         &.needphone {
             display: none;
+            z-index: 100;
+            position: absolute;
 
             &.display {
                 display: block;
@@ -406,12 +408,13 @@
                         &:last-child {
                             margin: 0;
                         }
-                        button {
+                        .button {
                             @include smallBtn;
                             padding: 4px 13px;
                             border-radius: 3px;
                             position: absolute;
-                            margin: 8px 0px 0px -100px;
+                            margin: -33px 0px 0px 212px;
+                            cursor: pointer;
                         }
                     }
 

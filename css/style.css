@@ -1740,6 +1740,8 @@ html body .filter .jumpWindow.plsGo .btnBox button:hover, html body .filter .jum
 }
 html body .filter .jumpWindow.needphone {
   display: none;
+  z-index: 100;
+  position: absolute;
 }
 html body .filter .jumpWindow.needphone.display {
   display: block;
@@ -1969,7 +1971,7 @@ html body .filter .jumpWindow.ReviseWindow form .content li {
 html body .filter .jumpWindow.ReviseWindow form .content li:last-child {
   margin: 0;
 }
-html body .filter .jumpWindow.ReviseWindow form .content li button {
+html body .filter .jumpWindow.ReviseWindow form .content li .button {
   border: solid 1px #cca172;
   color: #cca172;
   background: none;
@@ -1978,7 +1980,8 @@ html body .filter .jumpWindow.ReviseWindow form .content li button {
   padding: 4px 13px;
   border-radius: 3px;
   position: absolute;
-  margin: 8px 0px 0px -100px;
+  margin: -33px 0px 0px 212px;
+  cursor: pointer;
 }
 html body .filter .jumpWindow.ReviseWindow form .content input {
   width: 100%;

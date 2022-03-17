@@ -245,9 +245,12 @@ $(function(){
         $('.filter, .ReviseWindow').addClass('display');
     })
 
-    // $('.ReviseWindow .button').click(function(){
-    //     $('.filter, .needphone').addClass('display');
-    // })
+    $('.ReviseWindow .button').click(function(){
+        $('.filter, .needphone').addClass('display');
+    })
+    $('.needphone .btnBox, .close_ic').click(function(){
+        $('.needphone').removeClass('display');
+    })
 
     $('.dealBox .fakeTable td a').click(function(){
         $('.jumpWindow').removeClass('display');
