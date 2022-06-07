@@ -567,7 +567,7 @@ header .logout_ic {
 
 header .topGameList div {
   width: 220px;
-  height: 96px;
+  height: 184px;
 }
 header .topGameList div img {
   width: 100%;
@@ -1154,15 +1154,15 @@ html body header .topGameList {
   overflow: hidden;
   position: absolute;
   left: 0px;
-  bottom: -170px;
-  z-index: 1;
+  bottom: -226px;
+  z-index: 100;
 }
 html body header .topGameList.display {
   height: auto;
 }
 html body header .topGameList .listWrap {
   width: 100%;
-  height: 170px;
+  height: 226px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-top: solid 1px #e6e6e6;

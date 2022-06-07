@@ -348,8 +348,8 @@ header {
         overflow: hidden;
         position: absolute;
         left: 0px;
-        bottom: -170px;
-        z-index: 1;
+        bottom: -226px;
+        z-index: 100;
 
         &.display {
             height: auto;
@@ -357,7 +357,7 @@ header {
 
         .listWrap {
             width: 100%;
-            height: 170px;
+            height: 226px;
             box-sizing: border-box;
             border-top: solid 1px $main_Border_2;
             background: $mainBG_2;
