@@ -59,7 +59,7 @@
 
         .eventList {
             // display: none;
-            width: 1028px;
+            width: 1024px;
 
             // &.display {
             //     display: block;
@@ -68,23 +68,26 @@
             .eventBox {
                 background: $mainBG_2;
                 box-shadow: 0 5px 10px -5px $boxShadow_3;
-                display: flex;
                 margin-bottom: 20px;
+                overflow: hidden;
+                border-radius: 5px;
 
                 &:last-child {
                     margin: 0;
                 }
 
                 ul {
-                    width: 252px;
-                    min-height: 185px;
+                    width: 100%;
+                    height: 60px;
                     display: flex;
-                    flex-direction: column;
+                    align-items: center;
                     justify-content: space-between;
-                    margin: 30px 27px;
+                    box-sizing: border-box;
+                    padding: 0 20px;
 
                     .title {
-                        font-size: 29px;
+                        width: 50%;
+                        font-size: 24px;
                         font-weight: bold;
                         letter-spacing: 3px;
                         overflow: hidden;
@@ -93,7 +96,7 @@
                     }
 
                     .btnBox {
-                        width: 100%;
+                        width: auto;
                         height: auto;
 
                         button {
