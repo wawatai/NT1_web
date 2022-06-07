@@ -694,13 +694,8 @@ main .mainWrap {
      object-fit: cover;
 }
 
-.checkEvent .imgBox {
-  width: 100%;
-  height: 400px;
-}
 .checkEvent .imgBox img {
   width: 100%;
-  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1528,7 +1523,7 @@ html body .filter {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 1000;
   background: #000000a3;
   top: 0px;
   left: 0px;
@@ -2104,7 +2099,7 @@ html body .filter .jumpWindow.walletRecord .content .noData {
 }
 html body .filter .jumpWindow.checkEvent {
   display: none;
-  width: 840px;
+  width: 1000px;
 }
 html body .filter .jumpWindow.checkEvent.display {
   display: block;
@@ -2114,16 +2109,20 @@ html body .filter .jumpWindow.checkEvent .content {
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 28px 47px;
+  padding: 28px 22px 0;
 }
 html body .filter .jumpWindow.checkEvent .content .imgBox {
+  width: 100%;
+  height: 500px;
   overflow-x: auto;
 }
 html body .filter .jumpWindow.checkEvent .content p {
   font-size: 16px;
+  font-weight: bold;
   letter-spacing: 1px;
-  color: #666666;
+  color: #333333;
   margin-top: 10px;
+  line-height: 20px;
 }
 html body .filter .jumpWindow.checkEvent .btnBox {
   width: 100%;
@@ -2939,11 +2938,7 @@ html body .eventWrap .eventBody .side ul li span {
   color: #666666;
 }
 html body .eventWrap .eventBody .eventList {
-  display: none;
   width: 1028px;
-}
-html body .eventWrap .eventBody .eventList.display {
-  display: block;
 }
 html body .eventWrap .eventBody .eventList .eventBox {
   background: #ffffff;
@@ -3016,87 +3011,6 @@ html body .eventWrap .eventBody .eventList .eventBox ul .btnBox .disable {
 html body .eventWrap .eventBody .eventList .eventBox ul .btnBox .disable:hover, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox .disable:active, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox .disable.active {
   background: #c7c7c7;
   color: #ffffff;
-}
-html body .eventWrap .eventBody .eventDetail {
-  display: none;
-  width: 1028px;
-  background: #ffffff;
-  -webkit-box-shadow: 0px 5px 10px -5px #00000033;
-          box-shadow: 0px 5px 10px -5px #00000033;
-}
-html body .eventWrap .eventBody .eventDetail.display {
-  display: block;
-}
-html body .eventWrap .eventBody .eventDetail .title {
-  padding: 22px 40px 18px;
-}
-html body .eventWrap .eventBody .eventDetail .title p {
-  font-size: 34px;
-  font-weight: bold;
-  color: #666666;
-}
-html body .eventWrap .eventBody .eventDetail .title button {
-  width: 135px;
-  height: 36px;
-  margin-top: 18px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(#f1d7b7, #cca172 50%, #f1c999);
-  border: 1px solid #d2a269;
-  border-radius: 3px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 0 16px;
-}
-html body .eventWrap .eventBody .eventDetail .title button:hover, html body .eventWrap .eventBody .eventDetail .title button:active, html body .eventWrap .eventBody .eventDetail .title button.active {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0, #cca172 50%, #f1c999);
-}
-html body .eventWrap .eventBody .eventDetail .title button i {
-  display: inline-block;
-  width: 17px;
-  height: 17px;
-  margin: 0 10px -2px 0;
-}
-html body .eventWrap .eventBody .eventDetail .date {
-  margin: 0 40px;
-  padding: 28px 0 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-bottom: solid 1px #e6e6e6;
-}
-html body .eventWrap .eventBody .eventDetail .date span {
-  color: #666666;
-  font-size: 20px;
-}
-html body .eventWrap .eventBody .eventDetail .date span.dateTitle {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 28px;
-  color: #3d4cce;
-}
-html body .eventWrap .eventBody .eventDetail .info {
-  padding: 25px 40px;
-}
-html body .eventWrap .eventBody .eventDetail .info p {
-  font-size: 16px;
-  color: #666666;
-}
-html body .eventWrap .eventBody .eventDetail .info p.infoTitle {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  color: #3d4cce;
-}
-html body .eventWrap .eventBody .eventDetail .detailFooter {
-  width: 100%;
-  height: 130px;
-  padding-bottom: 60px;
 }
 html body .innerPage {
   background: #f8f8fa;

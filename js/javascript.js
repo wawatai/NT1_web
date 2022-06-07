@@ -267,7 +267,6 @@ $(function(){
         $('.filter,.walletRecord').addClass('display');
     })
 
-
     $('.eventBox .check').click(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.checkEvent').addClass('display');
