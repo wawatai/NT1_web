@@ -594,32 +594,32 @@ main .mainWrap {
 }
 
 .mainWrap .typeList .sport .img {
-  background: url("../images/入口圖/sport.png") no-repeat;
+  background: url("../images/enter/sport.png") no-repeat;
   background-size: 100%;
 }
 
 .mainWrap .typeList .live .img {
-  background: url("../images/入口圖/live.png") no-repeat;
+  background: url("../images/enter/live.png") no-repeat;
   background-size: 100%;
 }
 
 .mainWrap .typeList .slot .img {
-  background: url("../images/入口圖/slot.png") no-repeat;
+  background: url("../images/enter/slot.png") no-repeat;
   background-size: 100%;
 }
 
 .mainWrap .typeList .lottery .img {
-  background: url("../images/入口圖/lottery.png") no-repeat;
+  background: url("../images/enter/lottery.png") no-repeat;
   background-size: 100%;
 }
 
 .mainWrap .typeList .fish .img {
-  background: url("../images/入口圖/fish.png") no-repeat;
+  background: url("../images/enter/fish.png") no-repeat;
   background-size: 100%;
 }
 
 .mainWrap .typeList .board .img {
-  background: url("../images/入口圖/board.png") no-repeat;
+  background: url("../images/enter/board.png") no-repeat;
   background-size: 100%;
 }
 
@@ -633,33 +633,18 @@ main .mainWrap {
   background-size: 100%;
 }
 
-.gameWrap {
-  background: url("../images/home_bg_1.jpg");
-  background-size: 100%;
-  background-repeat: repeat;
-}
-
 .gameWrap .mainImg {
   width: 609px;
   height: 730px;
 }
 
-.gameWrap .sportPage .btnBox img {
-  width: 108px;
-  height: 108px;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-.gameWrap .livePage .imgBox {
-  width: 170px;
-  height: 96px;
-}
-.gameWrap .livePage .imgBox img {
+.gameWrap .innBox img {
   width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 185px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
 
 .pfName img {
@@ -680,17 +665,6 @@ main .mainWrap {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.eventDetail .imgBox {
-  width: 100%;
-  height: 423px;
-}
-.eventDetail .imgBox img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .checkEvent .imgBox img {
@@ -2415,11 +2389,6 @@ html body .gameWrap .content {
   width: 100%;
   min-width: 1400px;
 }
-html body .gameWrap .content.slotPage {
-  width: 1400px;
-  height: auto;
-  margin: 0 auto;
-}
 html body .gameWrap .content .center {
   width: 1400px;
   height: 100%;
@@ -2427,9 +2396,6 @@ html body .gameWrap .content .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2438,7 +2404,8 @@ html body .gameWrap .content .center {
 }
 html body .gameWrap .content .textBox {
   width: 695px;
-  height: 585px;
+  height: auto;
+  padding-top: 138px;
 }
 html body .gameWrap .content .textBox .title {
   display: -webkit-box;
@@ -2473,22 +2440,28 @@ html body .gameWrap .content .btnBox {
   height: auto;
 }
 html body .gameWrap .content .btnBox .innBox {
-  width: 660px;
+  width: auto;
   height: auto;
 }
 html body .gameWrap .content .btnBox .innBox ul {
   width: 100%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 189px 10px 189px 10px 189px;
+  grid-template-columns: repeat(3, 189px);
+  grid-gap: 10px;
+  padding-bottom: 20px;
 }
 html body .gameWrap .content .btnBox .innBox ul li {
   width: auto;
   height: auto;
   cursor: pointer;
   font-weight: bold;
-  margin-right: 15px;
+}
+html body .gameWrap .content .btnBox .innBox ul li:hover img, html body .gameWrap .content .btnBox .innBox ul li:active img, html body .gameWrap .content .btnBox .innBox ul li.active img {
+  -o-object-position: bottom;
+     object-position: bottom;
 }
 html body .gameWrap .content .btnBox .innBox ul li p {
   width: 100%;
@@ -2496,9 +2469,6 @@ html body .gameWrap .content .btnBox .innBox ul li p {
   font-size: 14px;
   color: #666666;
   padding-top: 10px;
-}
-html body .gameWrap .content.livePage .btnBox .innBox ul li {
-  margin: 0 15px 5px 0;
 }
 html body .gameWrap .slotCenter {
   width: 1400px;
@@ -2606,10 +2576,6 @@ html body .gameWrap .slotCenter .slotBody .gameBox .platformBox {
 }
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms {
   margin-bottom: 50px;
-  display: none;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms.display {
-  display: block;
 }
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName {
   width: 100%;
@@ -2618,80 +2584,16 @@ html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfNa
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName.active {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName.active .back {
-  display: block;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName.active .all {
-  display: none;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back {
-  display: none;
-  width: 137px;
-  height: 40px;
-  font-size: 15px;
-  font-weight: bold;
-  color: #ffffff;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f1c999), color-stop(50%, #cca172), to(#f1d7b7));
-  background: linear-gradient(to bottom, #f1c999 1%, #cca172 50%, #f1d7b7 100%);
-  border: solid 1px #f9e3c8;
-  border-radius: 5px;
-  letter-spacing: 1px;
-  font-size: 18px;
-  padding-left: 20px;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back:hover, html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back:active, html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back.active {
-  background: -webkit-gradient(linear, left bottom, left top, from(#f1c999), to(#cca172));
-  background: linear-gradient(to top, #f1c999 0%, #cca172 100%);
-  color: #ffffff;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .back i {
-  display: inline-block;
-  width: 10px;
-  height: 20px;
-  position: relative;
-  right: 75px;
-  top: 4px;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .all {
-  background: -webkit-gradient(linear, left top, left bottom, from(#f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(#f1d7b7, #cca172 50%, #f1c999);
-  border: 1px solid #d2a269;
-  border-radius: 3px;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 0 16px;
-  width: 137px;
-  height: 40px;
-  font-size: 18px;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .all:hover, html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .all:active, html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .all.active {
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f1d7b7), color-stop(50%, #cca172), to(#f1c999));
-  background: linear-gradient(to top, #f1d7b7 0, #cca172 50%, #f1c999);
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .pfName .all i {
-  display: inline-block;
-  width: 8px;
-  height: 15px;
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
-  margin-left: 20px;
-}
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .gameList {
   width: 100%;
-  height: 200px;
+  height: auto;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -2701,9 +2603,6 @@ html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .game
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .gameList.active {
-  height: auto;
 }
 html body .gameWrap .slotCenter .slotBody .gameBox .platformBox .platforms .gameList li {
   width: 250px;

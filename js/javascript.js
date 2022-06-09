@@ -85,7 +85,7 @@ $(function(){
         n ++;
         slwp[0].style.transform = "translateX(" + (-220 * n) + "px)";
 
-        if(n == 3){
+        if(n == 6){
             n --;
         }
     })
@@ -139,7 +139,7 @@ $(function(){
         n ++;
         bdwp[0].style.transform = "translateX(" + (-220 * n) + "px)";
 
-        if(n == 14){
+        if(n == 1){
             n --;
         }
     })
@@ -197,10 +197,10 @@ $(function(){
 
         $('.topGameList .sport li').attr("onclick","openSportGame()");
         $('.topGameList .live li').attr("onclick","openLiveGame()");
-        $('.topGameList .slot li').attr("onclick","openSlotGame()");
-        $('.topGameList .fish li').attr("onclick","openFishGame()");
+        $('.topGameList .slot li').attr("onclick","window.location.href='./html/slotPageInner.html'");
+        $('.topGameList .fish li').attr("onclick","window.location.href='./html/fishPageInner.html'");
         $('.topGameList .lottery li').attr("onclick","openLotteryGame()");
-        $('.topGameList .board li').attr("onclick","openBoardGame()");
+        $('.topGameList .board li').attr("onclick","window.location.href='./html/boardPageInner.html'");
     })
 })
 
@@ -215,9 +215,13 @@ $(function(){
 $(function(){
     $('.jumpWindow .close_ic,.jumpWindow .close_ic_gray').click(function(){
         $('.filter').removeClass('display');
+
+        openScroll();
     })
     $('.plsGo button,.checkEvent button').click(function(){
         $('.filter').removeClass('display');
+
+        openScroll();
     })
 
     $('header .forget').click(function(){
@@ -270,6 +274,8 @@ $(function(){
     $('.eventBox .check').click(function(){
         $('.jumpWindow').removeClass('display');
         $('.filter,.checkEvent').addClass('display');
+
+        stopScroll();
     })
     $('.eventBox .apply').click(function(){
         $('.jumpWindow').removeClass('display');
@@ -294,6 +300,14 @@ $(function(){
 function unlogin(){
     $('.jumpWindow').removeClass('display');
     $('.filter,.plsGo').addClass('display');
+}
+function stopScroll(){
+    document.documentElement.style.overflow="hidden";
+    document.body.style.position="fixed";
+}
+function openScroll(){
+    document.documentElement.style.overflow="scroll";
+    document.body.style.position="static";
 }
 
 //jumpWindow .new .content

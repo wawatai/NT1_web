@@ -564,7 +564,7 @@ header .topGameList div {
     object-fit: cover;
 }
 
-//入口頁中央遊戲入口圖 .mainWrap .img
+//入口頁中央遊戲enter .mainWrap .img
 main .mainWrap {
     background: url('../images/home_bg_1.jpg');
     background-size: 100%;
@@ -574,27 +574,27 @@ main .mainWrap {
     height: 219px;
 }
 .mainWrap .typeList .sport .img {
-    background: url('../images/入口圖/sport.png') no-repeat;
+    background: url('../images/enter/sport.png') no-repeat;
     background-size: 100%;
 }
 .mainWrap .typeList .live .img {
-    background: url('../images/入口圖/live.png') no-repeat;
+    background: url('../images/enter/live.png') no-repeat;
     background-size: 100%;
 }
 .mainWrap .typeList .slot .img {
-    background: url('../images/入口圖/slot.png') no-repeat;
+    background: url('../images/enter/slot.png') no-repeat;
     background-size: 100%;
 }
 .mainWrap .typeList .lottery .img {
-    background: url('../images/入口圖/lottery.png') no-repeat;
+    background: url('../images/enter/lottery.png') no-repeat;
     background-size: 100%;
 }
 .mainWrap .typeList .fish .img {
-    background: url('../images/入口圖/fish.png') no-repeat;
+    background: url('../images/enter/fish.png') no-repeat;
     background-size: 100%;
 }
 .mainWrap .typeList .board .img {
-    background: url('../images/入口圖/board.png') no-repeat;
+    background: url('../images/enter/board.png') no-repeat;
     background-size: 100%;
 }
 
@@ -611,33 +611,38 @@ main .mainWrap {
 
 //gameWrap .mainImg左圖
 
-.gameWrap {
-    background: url('../images/home_bg_1.jpg');
-    background-size: 100%;
-    background-repeat: repeat;
-}
+// .gameWrap {
+//     background: url('../images/home_bg_1.jpg');
+//     background-size: 100%;
+//     background-repeat: repeat;
+// }
 .gameWrap .mainImg {
     width: 609px;
     height: 730px;
 }
-//sport右小圖
-.gameWrap .sportPage .btnBox img {
-    width: 108px;
-    height: 108px;
-    background-size: 100%;
-    background-repeat: no-repeat;
+.gameWrap .innBox img {
+    width: 100%;
+    height: 185px;
+    object-fit: cover;
+    object-position: top;
 }
+// .gameWrap .sportPage .btnBox img {
+//     width: 108px;
+//     height: 108px;
+//     background-size: 100%;
+//     background-repeat: no-repeat;
+// }
 //live右小圖
-.gameWrap .livePage .imgBox {
-    width: 170px;
-    height: 96px;
+// .gameWrap .livePage .imgBox {
+//     width: 170px;
+//     height: 96px;
     
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-    }
-}
+//     img {
+//         width: 100%;
+//         height: 100%;
+//         object-fit: contain;
+//     }
+// }
 
 //pfName 廠商icon
 .pfName img {
@@ -665,19 +670,18 @@ main .mainWrap {
     }
 }
 //.eventDetail .imgBox img
-.eventDetail {
+// .eventDetail {
 
-    .imgBox {
-        width: 100%;
-        height: 423px;
+//     .imgBox {
+//         width: 100%;
+//         height: 250px;
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-}
+//         img {
+//             width: 100%;
+//             object-fit: contain;
+//         }
+//     }
+// }
 
 //.jumpWindow .checkEvent img
 .checkEvent {
