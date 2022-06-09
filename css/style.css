@@ -1,4 +1,13 @@
 @charset "UTF-8";
+button:disabled {
+  background: #c7c7c7 !important;
+  color: #ffffff !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border: none !important;
+  cursor: not-allowed !important;
+}
+
 header .acc_ic {
   background: url("../images/icon/svg/id.svg") no-repeat;
   background-size: 100%;
@@ -254,7 +263,7 @@ header .logout_ic {
 }
 
 .eventTitle {
-  background: url("../images/eventTitle_bg.png") no-repeat;
+  background: url("../images/eventTitle_bg.png") no-repeat top center;
   background-size: cover;
 }
 
@@ -2866,7 +2875,7 @@ html body .eventWrap .eventBody .eventList .eventBox ul {
   padding: 0 20px;
 }
 html body .eventWrap .eventBody .eventList .eventBox ul .title {
-  width: 50%;
+  width: 72%;
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 3px;
@@ -2877,6 +2886,9 @@ html body .eventWrap .eventBody .eventList .eventBox ul .title {
 html body .eventWrap .eventBody .eventList .eventBox ul .btnBox {
   width: auto;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button {
   width: 117px;
@@ -2893,6 +2905,25 @@ html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button {
 html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:hover, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:active, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button.active {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f1d7b7), color-stop(50%, #cca172), to(#f1c999));
   background: linear-gradient(to top, #f1d7b7 0, #cca172 50%, #f1c999);
+}
+html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
+  background: linear-gradient(to bottom, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
+  border: solid 1px #0282cc;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: none;
+  margin-left: 10px;
+}
+html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child:hover, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child:active, html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child.active {
+  background: -webkit-gradient(linear, left bottom, left top, from(#9ddbec), color-stop(50%, #0282cc), to(#82aeeb));
+  background: linear-gradient(to top, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
+}
+html body .eventWrap .eventBody .eventList .eventBox ul .btnBox button:last-child.display {
+  display: block;
 }
 html body .eventWrap .eventBody .eventList .eventBox ul .btnBox .disable {
   width: 117px;

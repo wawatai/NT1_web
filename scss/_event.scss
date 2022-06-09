@@ -86,7 +86,7 @@
                     padding: 0 20px;
 
                     .title {
-                        width: 50%;
+                        width: 72%;
                         font-size: 24px;
                         font-weight: bold;
                         letter-spacing: 3px;
@@ -98,11 +98,22 @@
                     .btnBox {
                         width: auto;
                         height: auto;
+                        display: flex;
 
                         button {
                             width: 117px;
                             height: 37px;
                             @include mainBtn;
+
+                            &:last-child {
+                                @include eventBtn;
+                                display: none;
+                                margin-left: 10px;
+
+                                &.display {
+                                    display: block;
+                                }
+                            }
                         }
                         .disable {
                             width: 117px;

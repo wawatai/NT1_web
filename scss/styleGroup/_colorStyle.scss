@@ -403,6 +403,13 @@ $footer_bg2:#e6e6e6;
         color: #ffffff;
     }
 }
+button:disabled {
+    background: #c7c7c7 !important;
+    color: #ffffff !important;
+    box-shadow: none !important;
+    border: none !important;
+    cursor: not-allowed !important;
+}
 
 //不能打字的input
 $notable:#fafafa;
@@ -414,5 +421,20 @@ $notable:#fafafa;
 
     &:hover,&:active,&.active {
         background: #0068FF;
+    }
+}
+
+//新增優惠申請按鈕
+@mixin eventBtn {
+    background: linear-gradient(to bottom, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
+    border: solid 1px #0282cc;
+    border-radius: 3px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &:hover,&:active,&.active {
+        background: linear-gradient(to top, #9ddbec 0%, #0282cc 50%, #82aeeb 100%);
     }
 }
